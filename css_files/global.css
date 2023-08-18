@@ -1,0 +1,217 @@
+/* 
+This CSS file affects all the web pages':
+- navigation bar
+- The paragraphs
+- footer
+- header image
+- the content in the header image (where applicable)
+Make changes to this file when necessary
+*/
+
+  a, a:hover{
+    text-decoration: none;
+    color: white;
+  }
+
+  /* Styling for the Navigation Bar */
+  .navbar {
+    background-color: rgba(0, 0, 0, 0.658);
+    padding-bottom: 0px;
+    padding-top: 0px;
+  }
+  
+  .navbar .nav-link {
+    color: white;
+    font-size: 15px;
+    height: 47px;
+    transition: background-color 0.3s ease-in-out;
+    bottom: 2px;
+  }
+  
+  .navbar .nav-link:hover {
+    background-color: rgba(250, 250, 250, 0.336);
+  }
+  
+  .navbar-brand {
+    width: 165px;
+    height: 40px;
+    border-radius: 31.5px;
+    background: url("/website_images/gracewell_logo.png"), 
+    lightgray -98.467px -99.489px / 206.272% 643.478% no-repeat;
+    opacity: 0.6;
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+  
+  .navbar p{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .navbar img {
+    right: 0px;
+  }
+  
+  /* Styling for the header image */
+  .header-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: cover;
+    padding: 150px;
+  }
+  
+  .btn {
+    /* The styling for the buttons*/
+    background-color: rgb(0, 89, 255);
+    color: white;
+    font-weight: bold;
+    padding: 8px 20px;
+    border-radius: 31.5px;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    /* The buttons glows blue when hover over with mouse */
+    background-color: rgb(9, 180, 223);
+    color: white;
+  }
+
+  .back_btn {
+    /* The styling for the buttons*/
+    background-color: rgb(0, 174, 255);
+    color: white;
+    font-weight:600;
+    padding: 8px 20px;
+    border-radius: 35px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;    
+    left: 10px; 
+  }
+  
+  .back_btn:hover {
+    /* The buttons glows blue when hover over with mouse */
+    background-color: rgb(0, 238, 255);
+    color: white;
+  }
+
+  .center-panel h1 {
+    color: white;
+    margin-bottom: 20px;
+  }
+ 
+  .center-panel h2 {
+    color: white;
+  }
+    
+  .center-panel h3 {
+    color: white;
+  }
+
+  /* Centering the content in the header image */
+  .center-panel {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.438);
+    padding: 20px; 
+    border-radius: 10px;
+    z-index: 1;
+  }
+
+  .center-panel p {
+    color: white;
+    display: block;
+  }
+  
+  .container {
+    width: 100%;
+  }
+
+  .container p {
+    font-weight: bold;
+  }
+
+  .content-section {
+    background-color: #f9f9f9;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s, transform 1s;
+  }
+
+  .content-header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .content-paragraph {
+    margin-bottom: 30px;
+  }
+  
+  .content-buttons {
+    text-align: left;
+  }
+
+
+  /* Styling for the footer */
+  .footer {
+    background-color: rgb(206, 206, 206);
+    padding: 20px 0;
+    text-align: left;
+    color: black;
+    position:-webkit-sticky;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+  }
+  
+  .footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer .footer-label {
+    font-size: 15px;
+    font-weight: bold;
+  }
+  
+  /* The footer image icons */
+  .footer .footer-links {
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer .footer-image {
+    width: 23px;
+    height: 23px;
+    margin-right: 5px;
+    margin: 4px;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 1000px) {
+    .center-panel {
+      /* Reduces the size of the black transparent panel in the header */
+      padding: 10px;
+    }
+  
+    .center-panel p {
+      /* Hides the paragraph in the welcome message */
+      display: none;
+    }
+  }
+
+  @media (max-width: 995px) {
+    .header-image .center-panel {
+      padding: 7px;
+      margin-bottom: 20px;
+    }
+  }
+  

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GraceWell Community SignIn</title>
+
+  <!-- Bootstrap CSS -->
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+
+  <link rel="stylesheet" href="/css_files/login_page.css">
+  <link rel="stylesheet" href="/css_files/global.css">
+</head>
+
+<body>
+    <div class="login-container">
+        <div class="login-form">
+            <div class="logo"></div>
+            <h1>Login</h1>
+            <form>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+                <button type="submit">Sign In</button>
+                <p>Forgot your Password ? <a href="#">Click here</a></p>  <!-- Linking the sign up page -->
+                <p><a href="/register_page.html">Register</a></p>
+            </form>       
+        </div>
+    </div>
+</body>
+
+
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js";
+    import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyAMipDrnQjCPbwlN8S39TIOyCC11NC7Zbc",
+      authDomain: "gracewelldatabasewebapp.firebaseapp.com",
+      projectId: "gracewelldatabasewebapp",
+      storageBucket: "gracewelldatabasewebapp.appspot.com",
+      messagingSenderId: "1060415129924",
+      appId: "1:1060415129924:web:e18f89a5c3f106eae1ef11",
+      measurementId: "G-X70R9XKT64"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+
+    function signIn() {
+        const auth = getAuth();
+        
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        
+        signInWithEmailAndPassword(auth, email, password)
+            .then(() => {
+                console.log('User signed in successfully!');
+                window.location.href = '/home_page.html'; // Redirect to home page on successful login
+            })
+            .catch((error) => {
+                console.error('Error signing in:', error);
+                // Display an error message to the user if needed
+            });
+    }
+
+  </script>
+</html>

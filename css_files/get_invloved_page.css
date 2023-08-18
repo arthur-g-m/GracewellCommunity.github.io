@@ -1,0 +1,45 @@
+  /* CSS code for the specifically the Landing Page */
+.header-image {
+    background-image: url("/website_images/Grace_Well_Church.jpg");
+  }
+
+.header-image .row .col-md-6 {
+  margin: 0px -90px;
+}  
+
+.header-image .row {
+  justify-content: center;
+}  
+
+.content-header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.content-paragraph {
+  margin-bottom: 30px;
+}
+
+.content-buttons {
+  text-align: left;
+}
+
+.col-md-6 img {
+  width: 370px;
+  height: 250px;
+  border-radius: 10px;
+}
+
+@media (max-width: 900px) {
+  .header-image .row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .header-image .row .col-md-6 {
+    margin: 90px 0; 
+    flex: 0 0 100%; /* Each panel takes the full width on smaller screens */
+  }
+}
