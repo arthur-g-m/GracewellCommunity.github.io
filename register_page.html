@@ -9,14 +9,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css_files/register_page.css">
-    <link rel="stylesheet" href="/css_files/global.css">
+    <link rel="stylesheet" href="/GracewellCommunity.github.io/css_files/register_page.css">
+    <link rel="stylesheet" href="/GracewellCommunity.github.io/css_files/global.css">
 </head>
 
 <body>
     <div class="register-container">
         <div class="register-form">
-            <a href="/index.html"> <div class="logo"></div> </a>
+            <a href="/GracewellCommunity.github.io/index.html"> <div class="logo"></div> </a>
             <form>
             <h1>Register</h1>
                 <div class="form-group">
@@ -63,8 +63,9 @@
                     <label for="password-confirm">Confirm Password:</label>
                     <input type="password" id="password-confirm" name="password-confirm" placeholder="Retype your password" required>
                 </div>
-                <button type="submit">Register</button>
-                <p>Already have an account : <a href="/login_page.html">Click here</a></p>  <!-- Linking the sign up page -->
+                <button type="submit" onclick="showConfirmation()"> Register </button>
+                <button onclick="redirectToLoginPage()"> Back to Login </button>
+                <p>Already have an account : <a href="/GracewellCommunity.github.io/login_page.html">Click here</a></p>  <!-- Linking the sign up page -->
                 
             </form>
             
@@ -94,6 +95,16 @@
     // Initialize Firebase
     const app = initializeApp(firebaseConfig);
     const analytics = getAnalytics(app);
+
+    function showConfirmation() {
+            // Display a confirmation message to the user
+            alert("Thank you for your input. The Admin will now process...");
+        }
+
+        function redirectToLoginPage() {
+            // Redirect the user to the login page
+            window.location.href = "/GracewellCommunity.github.io/login_page.html";
+        }
 
     function registerUser() {
         const database = getDatabase();
@@ -139,4 +150,15 @@
 
 
   </script>
+
+  <!-- Bootstrap JS (Popper.js and jQuery are required for Bootstrap) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- Vue.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <!-- Custom JavaScript code -->
+  <script src="/GracewellCommunity.github.io/global.js"></script>
+  
 </html>

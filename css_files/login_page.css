@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url('/website_images/Fieldbible.jpg');
+    background-image: url('/GracewellCommunity.github.io/website_images/Fieldbible.jpg');
     background-size: cover;
     background-position: center;
     min-height: 100vh;
@@ -34,7 +34,7 @@ body {
 */
 
 .logo {
-    background: url("/website_images/gracewell_logo.png");
+    background: url("/GracewellCommunity.github.io/website_images/gracewell_logo.png");
     width: 160px;
     height: 40px;
     border-radius: 31.5px;
