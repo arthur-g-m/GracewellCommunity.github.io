@@ -11,6 +11,11 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/GracewellCommunity.github.io/css_files/register_page.css">
     <link rel="stylesheet" href="/GracewellCommunity.github.io/css_files/global.css">
+
+    <script> src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js" </script>
+    <script> src="https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js" </script>
+    <script> src="https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js" </script>
+
 </head>
 
 <body>
@@ -75,9 +80,9 @@
 </body>
 <script type="module">
     // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js";
-    import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js";
+   // import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+   // import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js";
+    // import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js";
     // TODO: Add SDKs for Firebase products that you want to use
     // https://firebase.google.com/docs/web/setup#available-libraries
   
@@ -145,8 +150,5 @@
         const randomNumber = Math.floor(Math.random() * 10000); // Generate a random number between 0 and 9999, used for id with gw
         return prefix + randomNumber;
     }
-
-
-
   </script>
 </html>
