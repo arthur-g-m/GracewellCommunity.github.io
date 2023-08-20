@@ -12,7 +12,7 @@ const firebaseConfig = {
   firebase.initializeApp(firebaseConfig);
 
   // reference your database
-  var regFormDB = firebase.database().ref("Registration form")
+  var regFormDB = firebase.database().ref("registrationForm")
 
   document.getElementById("registrationForm").addEventListener("submit", submitForm)
 
