@@ -21,15 +21,15 @@ const firebaseConfig = {
 function submitForm(e){
        e.preventDefault()
 
-       var name = document.getElementById("name");
-       var surname = document.getElementById("surname");
-       var email = document.getElementById("email");
-       var address = document.getElementById("address");
+       var name = document.getElementById("name").value;
+       var surname = document.getElementById("surname").value;
+       var email = document.getElementById("email").value;
+       var address = document.getElementById("address").value;
        var dob = document.getElementById("dob").value;
-       var sex = document.querySelector('input[name="sex"]:checked');
-       var cellPhone = document.getElementById("cellphone");
-       var telephone = document.getElementById("telephone");
-       var password = document.getElementById("password");
+       var sex = document.querySelector('input[name="sex"]:checked').value;
+       var cellPhone = document.getElementById("cellphone").value;
+       var telephone = document.getElementById("telephone").value;
+       var password = document.getElementById("password").value;
 
        saveReg(name, surname, email, address, dob, sex, cellPhone, telephone, password)
        
