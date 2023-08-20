@@ -1,12 +1,11 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyAMipDrnQjCPbwlN8S39TIOyCC11NC7Zbc",
-    authDomain: "gracewelldatabasewebapp.firebaseapp.com",
-    databaseURL: "https://gracewelldatabasewebapp-default-rtdb.firebaseio.com",
-    projectId: "gracewelldatabasewebapp",
-    storageBucket: "gracewelldatabasewebapp.appspot.com",
-    messagingSenderId: "1060415129924",
-    appId: "1:1060415129924:web:e18f89a5c3f106eae1ef11",
-    measurementId: "G-X70R9XKT64"
+    apiKey: "AIzaSyDhys7Y81Z0oyo10M1hIzg8t2wQIxxFMYA",
+    authDomain: "gracewellweb.firebaseapp.com",
+    databaseURL: "https://gracewellweb-default-rtdb.firebaseio.com",
+    projectId: "gracewellweb",
+    storageBucket: "gracewellweb.appspot.com",
+    messagingSenderId: "652542325461",
+    appId: "1:652542325461:web:e3c2e33540e195514a285c"
   };
 
   // initialising firebase
