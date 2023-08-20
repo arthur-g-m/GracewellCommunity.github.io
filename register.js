@@ -32,7 +32,7 @@ function submitForm(e){
 
        saveReg(name, surname, email, address, dob, sex, cellPhone, telephone, password)
        
-       //console.log(name, surname, email, address, dob, sex, cellPhone, telephone, password)
+       console.log(name, surname, email, address, dob, sex, cellPhone, telephone, password)
 }
 
 const saveReg = (name, surname, email, address, dob, sex, cellPhone, telephone, password) => {
