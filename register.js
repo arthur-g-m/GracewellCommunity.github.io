@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", function() {
+
 const firebaseConfig = {
     apiKey: "AIzaSyDhys7Y81Z0oyo10M1hIzg8t2wQIxxFMYA",
     authDomain: "gracewellweb.firebaseapp.com",
@@ -53,3 +55,4 @@ const saveReg = (name, surname, email, address, dob, sex, cellPhone, telephone, 
 const getElementByVal = (id) => {
     return document.getElementById(id).value;
 }
+});
