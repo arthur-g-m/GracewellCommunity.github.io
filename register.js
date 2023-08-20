@@ -14,7 +14,7 @@ const firebaseConfig = {
   // reference your database
   var regFormDB = firebase.database().ref("Registration form")
 
-  document.getElementById("registrationForm").addEventListener("sumbit", submitForm)
+  document.getElementById("registrationForm").addEventListener("submit", submitForm)
 
 function submitForm(e){
        e.preventDefault()
@@ -24,7 +24,7 @@ function submitForm(e){
        var email = document.getElementById("email");
        var address = document.getElementById("address");
        var dob = document.getElementById("dob").value;
-       var sex = document.querySelector('input [name="sex"] : checked');
+       var sex = document.querySelector('input[name="sex"]:checked');
        var cellPhone = document.getElementById("cellphone");
        var telephone = document.getElementById("telephone");
        var password = document.getElementById("password");
