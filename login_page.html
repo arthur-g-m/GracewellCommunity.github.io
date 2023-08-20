@@ -36,56 +36,50 @@
         </div>
     </div>
 </body>
+
 <script type="module">
+
     // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js";
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.2.0/firebase-app.js";
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.2.0/firebase-database.js";
     import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
+
+
     // TODO: Add SDKs for Firebase products that you want to use
     // https://firebase.google.com/docs/web/setup#available-libraries
   
     // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
     const firebaseConfig = {
-        apiKey: "AIzaSyAMipDrnQjCPbwlN8S39TIOyCC11NC7Zbc",
-        authDomain: "gracewelldatabasewebapp.firebaseapp.com",
-        databaseURL: "https://gracewelldatabasewebapp-default-rtdb.firebaseio.com",
-        projectId: "gracewelldatabasewebapp",
-        storageBucket: "gracewelldatabasewebapp.appspot.com",
-        messagingSenderId: "1060415129924",
-        appId: "1:1060415129924:web:e18f89a5c3f106eae1ef11",
-        measurementId: "G-X70R9XKT64"
+      apiKey: "AIzaSyDhys7Y81Z0oyo10M1hIzg8t2wQIxxFMYA",
+      authDomain: "gracewellweb.firebaseapp.com",
+      databaseURL: "https://gracewellweb-default-rtdb.firebaseio.com",
+      projectId: "gracewellweb",
+      storageBucket: "gracewellweb.appspot.com",
+      messagingSenderId: "652542325461",
+      appId: "1:652542325461:web:e3c2e33540e195514a285c"
     };
   
     // Initialize Firebase
     const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
-
+    const database = getDatabase(app);
     function signIn() {
-        const auth = getAuth();
-        
-        const email = document.getElementById('email').value;
-        const password = document.getElementById('password').value;
-        
-        signInWithEmailAndPassword(auth, email, password)
-            .then(() => {
-                console.log('User signed in successfully!');
-                window.location.href = '/GracewellCommunity.github.io/home_page.html'; // Redirect to home page on successful login
-            })
-            .catch((error) => {
-                console.error('Error signing in:', error);
-                // Display an error message to the user if needed
-            });
-    }
-
+    const auth = getAuth();
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+     
+    signInWithEmailAndPassword(auth, email, password)
+      .then(() => {
+        console.log('User signed in successfully!');
+        window.location.href = '/GracewellCommunity.github.io/home_page.html'; // Redirect to home page on successful login
+    })
+     .catch((error) => {
+      console.error('Error signing in:', error);
+     // Display an error message to the user if needed
+    });
+ }
   </script>
-  <!-- Bootstrap JS (Popper.js and jQuery are required for Bootstrap) -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-  <!-- Vue.js CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-  <!-- Custom JavaScript code -->
-  <script src="/GracewellCommunity.github.io/global.js"></script>
+  
+
 </html>
+
