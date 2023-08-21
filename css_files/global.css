@@ -7,7 +7,6 @@ This CSS file affects all the web pages':
 - the content in the header image (where applicable)
 Make changes to this file when necessary
 */
-
   a, a:hover{
     text-decoration: none;
     color: white;
@@ -81,7 +80,7 @@ Make changes to this file when necessary
     /* The styling for the buttons*/
     background-color: rgb(0, 174, 255);
     color: white;
-    font-weight:600;
+    font-weight:bold;
     padding: 8px 20px;
     border-radius: 35px;
     cursor: pointer;
@@ -131,43 +130,41 @@ Make changes to this file when necessary
     width: 100%;
   }
 
-  .container p {
+  .container footer p {
     font-weight: bold;
   }
 
   .content-section {
     background-color: #f9f9f9;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     opacity: 0;
     transform: translateY(40px);
     transition: opacity 1s, transform 1s;
   }
 
   .content-header {
-    font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
   }
   
   .content-paragraph {
     margin-bottom: 30px;
+    margin-top: 30px;
   }
   
   .content-buttons {
     text-align: left;
   }
 
-
   /* Styling for the footer */
   .footer {
     background-color: rgb(206, 206, 206);
     padding: 20px 0;
-    text-align: left;
+    text-align: center;
     color: black;
     position:-webkit-sticky;
     bottom: 0px;
-    left: 0px;
     width: 100%;
   }
   
@@ -195,6 +192,11 @@ Make changes to this file when necessary
     margin: 4px;
   }
   
+  .row{
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
   /* Mobile responsiveness */
   @media (max-width: 1000px) {
     .center-panel {

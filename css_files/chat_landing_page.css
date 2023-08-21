@@ -2,10 +2,9 @@
     background-image: url("/GracewellCommunity.github.io/website_images/pexels-askar-abayev-community-chat\(edited\).jpg");
   }
 
-  .content-header {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
+  .col-md-5 a {
+    height: 43px; 
+    margin-top: 50px;
   }
   
   .content-paragraph {
