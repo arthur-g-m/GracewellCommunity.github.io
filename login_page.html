@@ -11,16 +11,20 @@
 
   <!-- Custom CSS -->
 
-  <link rel="stylesheet" href="/GracewellCommunity.github.io/css_files/login_page.css">
-  <link rel="stylesheet" href="/GracewellCommunity.github.io/css_files/global.css">
+  <link rel="stylesheet" href=" ./css_files/login_page.css">
+  <link rel="stylesheet" href=" ./css_files/global.css">
 </head>
 
 <body>
+  <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script> 
+  <script _src="https://www.gstatic.com/firebasejs/7.23.0/firebase-analytics.js"></script> 
+  <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
+
     <div class="login-container">
         <div class="login-form">
             <div class="logo"></div>
             <h1>Login</h1>
-            <form>
+            <form onsubmit="login(event)">
                 <div class="form-group">
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" placeholder="Enter your email" required>
@@ -31,55 +35,12 @@
                 </div>
                 <button type="submit">Sign In</button>
                 <p>Forgot your Password ? <a href="#">Click here</a></p>  <!-- Linking the sign up page -->
-                <p><a href="/GracewellCommunity.github.io/register_page.html">Register</a></p>
+                <p><a href=" ./register_page.html">Register</a></p>
+
             </form>       
         </div>
     </div>
 </body>
-
-<script type="module">
-
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.2.0/firebase-app.js";
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.2.0/firebase-database.js";
-    import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
-
-
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
-  
-    // Your web app's Firebase configuration
-    const firebaseConfig = {
-      apiKey: "AIzaSyDhys7Y81Z0oyo10M1hIzg8t2wQIxxFMYA",
-      authDomain: "gracewellweb.firebaseapp.com",
-      databaseURL: "https://gracewellweb-default-rtdb.firebaseio.com",
-      projectId: "gracewellweb",
-      storageBucket: "gracewellweb.appspot.com",
-      messagingSenderId: "652542325461",
-      appId: "1:652542325461:web:e3c2e33540e195514a285c"
-    };
-  
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const database = getDatabase(app);
-    function signIn() {
-    const auth = getAuth();
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-     
-    signInWithEmailAndPassword(auth, email, password)
-      .then(() => {
-        console.log('User signed in successfully!');
-        window.location.href = '/GracewellCommunity.github.io/home_page.html'; // Redirect to home page on successful login
-    })
-     .catch((error) => {
-      console.error('Error signing in:', error);
-     // Display an error message to the user if needed
-    });
- }
-  </script>
-
-  
 
 </html>
 
