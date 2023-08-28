@@ -1,7 +1,7 @@
 ﻿body {
     margin: 0;
     padding: 0;
-    background-image: url('/GracewellCommunity.github.io/website_images/Fieldbible.jpg');
+    background-image: url('../website_images/Fieldbible.jpg');
     background-size: cover;
     background-position: center;
     min-height: 100vh;
@@ -35,7 +35,6 @@
 */
 .register-container {
     position: relative;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,19 +42,17 @@
 
 .register-form {
     background-color: rgba(255, 255, 255, 0.5);
-    padding: 30px;
-    border-radius: 30px;
+    padding: 60px;
+    border-radius: 60px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-    width: 400px;
 }
 
 .logo {
-    background: url("/GracewellCommunity.github.io/website_images/gracewell_logo.png");
+    background: url("../website_images/gracewell_logo.png");
     width: 160px;
     height: 40px;
     border-radius: 31.5px;
     margin-bottom: 10px;
-    text-align: center;   
     top: 50px;
 }
 
@@ -64,22 +61,11 @@ form {
     flex-direction: column;
 }
 
-.form-group {
-
-    margin-bottom: 10px;
-}
-
-    .form-group.horizontal {
-        display: flex;
-        gap: 10px;
-    }
-
-        .form-group.horizontal label {
-            width: 30%; /* Adjust label width as needed */
-        }
 
 label {
     font-weight: bold;
+    text-align: left;
+    margin-right: 10px;
 }
 
 input[type="text"],
@@ -92,6 +78,8 @@ input[type="password"] {
     padding: 8px;
     border: 2px solid #0000008d;
     border-radius: 0px;
+    box-sizing: border-box;
+    margin-top: 5px;
 }
 
 .radio-buttons {
