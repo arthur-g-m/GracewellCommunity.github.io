@@ -107,6 +107,17 @@
     const user = userCredential.user;
 
     alert("Account Succesfully Created!!");
+
+    set(ref(database, 'users/' + useruid), {
+            name: name,
+            surname: surname,
+            email: email,
+            address: address,
+            dob: dob,
+            sex: sex,
+            cellPhone: cellPhone,
+            telephone: telephone,
+        })
     // ...
   })    
   .catch((error) => {

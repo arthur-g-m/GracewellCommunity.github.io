@@ -1,3 +1,4 @@
+//database sending
 //document.addEventListener("DOMContentLoaded", function() {
 
 const firebaseConfig = {
