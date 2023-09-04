@@ -34,10 +34,11 @@
 }
 */
 .register-container {
-    position: relative;
+    position: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-position: center;
 }
 
 .register-form {
@@ -45,6 +46,8 @@
     padding: 60px;
     border-radius: 60px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    position: center;
+
 }
 
 .logo {
@@ -65,7 +68,8 @@ form {
 label {
     font-weight: bold;
     text-align: left;
-    margin-right: 10px;
+    margin-bottom: 0px;
+    display : block;
 }
 
 input[type="text"],
@@ -74,12 +78,11 @@ input[type="date"],
 input[type="tel"],
 input[type="password"] {
     width: 100%;
-    height: 30px;
+    height : 40px;
     padding: 8px;
     border: 2px solid #0000008d;
-    border-radius: 0px;
-    box-sizing: border-box;
-    margin-top: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
 .radio-buttons {
