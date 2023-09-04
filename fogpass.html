@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GraceWell Community SignIn</title>
+  <title>GraceWell Community Forgot</title>
 
   <!-- Bootstrap CSS -->
 
@@ -16,26 +16,19 @@
 </head>
 
 <body>
-  <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script> 
-  <script _src="https://www.gstatic.com/firebasejs/7.23.0/firebase-analytics.js"></script> 
-  <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
-
     <div class="login-container">
         <div class="login-form">
             <div class="logo"></div>
-            <h1>Login</h1>
+            <h1>Account recovery</h1>
             <form onsubmit="login(event)">
                 <div class="form-group">
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" placeholder="Enter your email" required>
                 </div>
-                <div class="form-group">
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
-                </div>
                 <button type="submit">Sign In</button>
-                <p>Forgot your Password ? <a href="fogpass.html">Click here</a></p>  <!-- Linking the sign up page -->
-                <p><a href=" ./register_page.html">Register</a></p>
+                <br>
+                <p>I know my details <a href="login_page.html">Login</a> instead </p>  <!-- Linking the sign up page -->
+                <p>Don't have a memebrship. <a href=" ./register_page.html">Register</a></p>
 
             </form>       
         </div>
