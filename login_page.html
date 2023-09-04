@@ -63,9 +63,12 @@
     const app = initializeApp(firebaseConfig);
     const database= getDatabase(app);
     const auth = getAuth();
+    
+    document.addEventListener('DOMContentLoaded', function() {
+    const loginButton = document.getElementById('login');
 
-
-    login.addEventListener('click',(e)=>{
+    loginButton.addEventListener('click',(e)=>{
+      e.preventDefault(); // Prevent form submission
         var email = document.getElementById('email').value;
         var password = document.getElementById('password').value;
 
@@ -88,48 +91,8 @@
 
   });
 
-    });
+  });
+  });
       </script>
 </body>
 </html>
-
-<!-- <script>
-
-  update(ref(database, 'users/' + user.uid), {
-            last_login: 
-
-
-        // Initialize Firebase with your configuration
-        const firebaseConfig = {
-            apiKey: "AIzaSyDhys7Y81Z0oyo10M1hIzg8t2wQIxxFMYA",
-            authDomain: "gracewellweb.firebaseapp.com",
-            databaseURL: "https://gracewellweb-default-rtdb.firebaseio.com",
-            projectId: "gracewellweb",
-            storageBucket: "gracewellweb.appspot.com",
-            messagingSenderId: "652542325461",
-            appId: "1:652542325461:web:59f3b4b82c09eedc4a285c"
-        };
-    
-        firebase.initializeApp(firebaseConfig);
-    
-        function login(event) {
-          event.preventDefault(); // Prevent the form from submitting traditionally
-    
-          const email = document.getElementById("email").value;
-          const password = document.getElementById("password").value;
-    
-          firebase.auth().signInWithEmailAndPassword(email, password)
-            .then((userCredential) => {
-              // User signed in successfully
-              const user = userCredential.user;
-              alert("Login successful! Welcome, " + user.email);
-              // Redirect to the desired page or perform other actions upon successful login
-            })
-            .catch((error) => {
-              // Handle login errors
-              const errorCode = error.code;
-              const errorMessage = error.message;
-              alert("Login failed: " + errorMessage);
-            });
-        }
-      </script> -->
