@@ -1,43 +1,18 @@
 ﻿body {
     margin: 0;
     padding: 0;
-    background-image: url('../website_images/Fieldbible.jpg');
+    background-image: url('/website_images/Fieldbible.jpg');
     background-size: cover;
     background-position: center;
     min-height: 100vh;
 }
-/*.register-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-image: url('/website_images/Fieldbible.jpg');
-    background-size: cover;
-    background-position: center;
-}
 
-.register-form {
-    background-color: rgba(255, 255, 255, 0.5);
-    padding: 60px;
-    border-radius: 60px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-    width: 600px;
-    text-align: center;
-}
-
-.logo {
-    background: url("/website_images/gracewell_logo.png");
-    width: 160px;
-    height: 40px;
-    border-radius: 31.5px;
-    margin-bottom: 10px;
-}
-*/
 .register-container {
     position: relative;
+    height: 180vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: left;
 }
 
 .register-form {
@@ -45,27 +20,26 @@
     padding: 60px;
     border-radius: 60px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    max-width: 550px;
 }
 
-.logo {
-    background: url("../website_images/gracewell_logo.png");
-    width: 160px;
-    height: 40px;
-    border-radius: 31.5px;
+/*.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
     margin-bottom: 10px;
-    top: 50px;
-}
+    position: relative;
+    top: -50px;
+}*/
 
 form {
     display: flex;
     flex-direction: column;
 }
 
-
 label {
     font-weight: bold;
-    text-align: left;
-    margin-right: 10px;
+    padding-bottom: -80px
 }
 
 input[type="text"],
@@ -74,17 +48,15 @@ input[type="date"],
 input[type="tel"],
 input[type="password"] {
     width: 100%;
-    height: 30px;
+    height: 40px;
     padding: 8px;
     border: 2px solid #0000008d;
     border-radius: 0px;
-    box-sizing: border-box;
-    margin-top: 5px;
 }
 
 .radio-buttons {
     display: flex;
-    gap: 10px;
+    gap: 5px;
     margin-top: 5px;
 }
 
@@ -93,13 +65,14 @@ button {
     color: white;
     border: none;
     padding: 10px 20px;
-    border-radius: 50px;
+    border-radius: 1000px;
     cursor: pointer;
+    width : 80%;
 }
 
-    button:hover {
-        background-color: #45a049;
-    }
+button:hover {
+    background-color: #45a049;
+}
 
 h1 {
     font-size: 30px;
