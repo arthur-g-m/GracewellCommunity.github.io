@@ -16,9 +16,8 @@
 </head>
 
 <body>
-  <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script> 
-  <script _src="https://www.gstatic.com/firebasejs/7.23.0/firebase-analytics.js"></script> 
-  <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-app.js"></script> 
+  <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-auth.js"></script>
 
     <div class="login-container">
         <div class="login-form">
@@ -39,6 +38,42 @@
             </form>       
         </div>
     </div>
+    
+    <script>
+        // Initialize Firebase with your configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyDhys7Y81Z0oyo10M1hIzg8t2wQIxxFMYA",
+            authDomain: "gracewellweb.firebaseapp.com",
+            databaseURL: "https://gracewellweb-default-rtdb.firebaseio.com",
+            projectId: "gracewellweb",
+            storageBucket: "gracewellweb.appspot.com",
+            messagingSenderId: "652542325461",
+            appId: "1:652542325461:web:59f3b4b82c09eedc4a285c"
+        };
+    
+        firebase.initializeApp(firebaseConfig);
+    
+        function login(event) {
+          event.preventDefault(); // Prevent the form from submitting traditionally
+    
+          const email = document.getElementById("email").value;
+          const password = document.getElementById("password").value;
+    
+          firebase.auth().signInWithEmailAndPassword(email, password)
+            .then((userCredential) => {
+              // User signed in successfully
+              const user = userCredential.user;
+              alert("Login successful! Welcome, " + user.email);
+              // Redirect to the desired page or perform other actions upon successful login
+            })
+            .catch((error) => {
+              // Handle login errors
+              const errorCode = error.code;
+              const errorMessage = error.message;
+              alert("Login failed: " + errorMessage);
+            });
+        }
+      </script>
 </body>
 </html>
 
