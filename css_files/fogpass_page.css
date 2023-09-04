@@ -7,7 +7,7 @@ body {
     min-height: 100vh;
 }
 
-.login-container {
+.recovery-container {
     position: relative;
     height: 100vh;
     display: flex;
@@ -15,12 +15,12 @@ body {
     align-items: center;
 }
 
-.login-form {
+.recovery-form {
     background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
     padding: 60px;
     border-radius: 60px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-    max-width: 500px;
+    max-width: 600px;
 }
 
 /*.logo {
@@ -83,14 +83,14 @@ button:hover {
 h1 {
     font-size: 30px; /* Adjust the font size as required, Inter : 30 */
     font-family: "Inter", sans-serif; /* Use the Inter font family */
-    margin-bottom: 20px; /* Add some space below the title */
+    margin-bottom: 15px; /* Add some space below the title */
     text-align : center;
 }
 
 p {
     font-size: 15px; /* Adjust the font size as required, Inter : 30 */
     font-family: "Inter", sans-serif; /* Use the Inter font family */
-    margin-top: 20px; /* Add some space below the title */
+    margin-top: 10px; /* Add some space below the title */
     text-align: center;
 }
 

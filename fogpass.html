@@ -11,25 +11,26 @@
 
   <!-- Custom CSS -->
 
-  <link rel="stylesheet" href=" ./css_files/login_page.css">
+  <link rel="stylesheet" href=" ./css_files/fogpass_page.css">
   <link rel="stylesheet" href=" ./css_files/global.css">
 </head>
 
 <body>
-    <div class="login-container">
-        <div class="login-form">
-            <div class="logo"></div>
+    <div class="recovery-container">
+        <div class="recovery-form">
+            <!--<div class="logo"></div>-->
             <h1>Account recovery</h1>
+            <br>
             <form onsubmit="login(event)">
                 <div class="form-group">
                     <label for="email">Email:</label>
+                    <br>
                     <input type="email" id="email" name="email" placeholder="Enter your email" required>
                 </div>
-                <button type="submit">Sign In</button>
                 <br>
-                <p>I know my details <a href="login_page.html">Login</a> instead </p>  <!-- Linking the sign up page -->
+                <button type="submit">Sign In</button>
+                <p>I know my details <a href="./login_page.html">Login</a> instead </p>  <!-- Linking the sign up page -->
                 <p>Don't have a memebrship. <a href=" ./register_page.html">Register</a></p>
-
             </form>       
         </div>
     </div>
