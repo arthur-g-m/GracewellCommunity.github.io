@@ -90,7 +90,7 @@ h1 {
 p {
     font-size: 15px; /* Adjust the font size as required, Inter : 30 */
     font-family: "Inter", sans-serif; /* Use the Inter font family */
-    margin-top: 10px; /* Add some space below the title */
+    margin-top: 5px; /* Add some space below the title */
     text-align: center;
 }
 

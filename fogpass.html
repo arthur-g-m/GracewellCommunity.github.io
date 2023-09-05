@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,35 +7,71 @@
   <title>GraceWell Community Forgot</title>
 
   <!-- Bootstrap CSS -->
-
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
   <!-- Custom CSS -->
-
-  <link rel="stylesheet" href=" ./css_files/fogpass_page.css">
-  <link rel="stylesheet" href=" ./css_files/global.css">
+  <link rel="stylesheet" href="./css_files/fogpass_page.css">
+  <link rel="stylesheet" href="./css_files/global.css">
 </head>
 
 <body>
-    <div class="recovery-container">
-        <div class="recovery-form">
-            <!--<div class="logo"></div>-->
-            <h1>Account recovery</h1>
-            <br>
-            <form onsubmit="login(event)">
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <br>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                </div>
-                <br>
-                <button type="submit">Sign In</button>
-                <p>I know my details <a href="./login_page.html">Login</a> instead </p>  <!-- Linking the sign up page -->
-                <p>Don't have a memebrship. <a href=" ./register_page.html">Register</a></p>
-            </form>       
+  <div class="recovery-container">
+    <div class="recovery-form">
+      <h1>Account recovery</h1>
+      <br>
+      <form id="recovery-form">
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <br>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
         </div>
+        <br>
+        <button type="submit">Recover Account</button>
+        <br>
+        <p>I know my details <a href="./login_page.html">Login</a> instead</p>
+        <p>Don't have a membership. <a href="./register_page.html">Register</a></p>
+      </form>
     </div>
+  </div>
+
+  <!-- Firebase JavaScript SDK -->
+  <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-auth.js"></script>
+
+  <script>
+    // Initialize Firebase with your project configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyDhys7Y81Z0oyo10M1hIzg8t2wQIxxFMYA",
+      authDomain: "gracewellweb.firebaseapp.com",
+      databaseURL: "https://gracewellweb-default-rtdb.firebaseio.com",
+      projectId: "gracewellweb",
+      storageBucket: "gracewellweb.appspot.com",
+      messagingSenderId: "652542325461",
+      appId: "1:652542325461:web:59f3b4b82c09eedc4a285c"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+
+    const auth = firebase.auth();
+
+    // Handle form submission
+    document.getElementById("recovery-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const email = document.getElementById("email").value;
+
+      auth.sendPasswordResetEmail(email)
+        .then(() => {
+          alert("Account recovery email sent. Please check your email to reset your password.");
+          // You can redirect the user to a success page or do something else here.
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          console.error("Error:", errorMessage);
+          // Handle errors, e.g., show an error message to the user.
+        });
+    });
+  </script>
 </body>
-
 </html>
-
+      </script>
