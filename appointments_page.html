@@ -8,28 +8,28 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="/GracewellCommunity.github.io/css_files/appointments_page.css">
-  <link rel="stylesheet" href="/GracewellCommunity.github.io/css_files/global.css">
+  <link rel="stylesheet" href="././css_files/appointments_page.css">
+  <link rel="stylesheet" href="././css_files/global.css">
 </head>
 
 <body>
   <div id="app">
     <!-- Navigation bar -->
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-      <a class="navbar-brand" href="/GracewellCommunity.github.io/index.html" target="_self"></a>
+      <a class="navbar-brand" href="././index.html" target="_self"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a class="nav-link" href="/GracewellCommunity.github.io/home_page.html" target="_self">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="/GracewellCommunity.github.io/about_page.html" target="_self">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="/GracewellCommunity.github.io/contact_page.html" target="_self">Contact</a></li>
-          <li class="nav-item"><a class="nav-link" href="/GracewellCommunity.github.io/donations_page.html" target="_self">Donations</a></li>
-          <li class="nav-item"><a class="nav-link" href="/GracewellCommunity.github.io/appointments_page.html" target="_self">Appointments</a></li>
-          <li class="nav-item"><a class="nav-link" href="/GracewellCommunity.github.io/get_involved_page.html" target="_self">Get Involved</a></li>
-          <li class="nav-item"><a class="nav-link" href="/GracewellCommunity.github.io/login_page.html">Sign In</a></li>
+          <li class="nav-item"><a class="nav-link" href="././home_page.html" target="_self">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="././about_page.html" target="_self">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="././contact_page.html" target="_self">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="././donations_page.html" target="_self">Donations</a></li>
+          <li class="nav-item"><a class="nav-link" href="././appointments_page.html" target="_self">Appointments</a></li>
+          <li class="nav-item"><a class="nav-link" href="././get_involved_page.html" target="_self">Get Involved</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Sign In</a></li>
         </ul>
       </div>
     </nav>
@@ -38,7 +38,11 @@
     <div class="header-image">
       <div class="center-panel right-aligned">
         <h1>Matthew 7:7-11 </h1>
-        <p>“Ask, and it will be given to you; seek, and you will find; knock, and it will be opened to you. For everyone who asks receives, and the one who seeks finds, and to the one who knocks it will be opened. Or which one of you, if his son asks him for bread, will give him a stone? Or if he asks for a fish, will give him a serpent? If you then, who are evil, know how to give good gifts to your children, how much more will your Father who is in heaven give good things to those who ask him!</p>
+        <p>“Ask, and it will be given to you; seek, and you will find; knock, and it will be opened to you. For everyone
+          who asks receives, and the one who seeks finds, and to the one who knocks it will be opened. Or which one of
+          you, if his son asks him for bread, will give him a stone? Or if he asks for a fish, will give him a serpent?
+          If you then, who are evil, know how to give good gifts to your children, how much more will your Father who is
+          in heaven give good things to those who ask him!</p>
       </div>
     </div>
 
@@ -50,19 +54,53 @@
           <!-- Left side content -->
           <div class="col-md-6">
             <h3 class="content-header">Instructions</h3>
-            <p class="content-paragraph">Welcome to the GraceWell Methodist appointment system, here we pride ourselves and are strong believers in staying in touch and aware of every members wellbeing in our community, as such please know that we are  delighted and encourage to make use of our appointment scheduling system. Whether you're seeking professional advice, medical assistance, or just want to talk, we're here for you, here to help. Our Community will be more that dedicated to providing you with exceptional care and support.</p>
-            <p class="content-paragraph">
-              To book an appointment, please follow the steps below:</p>
-            <ol>
-              <li>Select the service you require from the list provided.</li>
-              <li>Choose a preferred date and time slot that suits your schedule.</li>
-              <li>Fill in your contact details, including your name, phone number, and email address.</li>
-              <li>Provide any specific information or additional notes that might be relevant to your appointment.</li>
-            </ol>
+
+            <p><strong>1. Fill out Your Personal Information:</strong> Enter your <strong>First Name</strong> and <strong>Last Name</strong> in the respective fields. Provide your <strong>Cellphone</strong> number, which is required for contact. Optionally, you can also provide your <strong>Telephone</strong> number. Enter your <strong>Email Address</strong> so we can get in touch with you regarding your appointment.</p>
+
+            <p><strong>2. Specify the Appointment Details and Submit Your Request:</strong> In the <strong>Subject Title</strong> field, briefly describe the purpose or topic of your appointment. In the <strong>Description</strong> field, provide more details about what you would like to discuss during the appointment. Once you've filled out all the necessary information, click the <strong>Submit</strong> button to send your appointment request.</p>
+
+            <p><strong>3. Confirmation Email:</strong> Our church team will review your request and get back to you as soon as possible via the email address you provided. After submitting the form, you will receive a confirmation email acknowledging your request.</p>
           </div>
-          <!-- Right side image -->
+          <!-- Right side content -->
           <div class="col-md-6">
             <h3 class="content-header">Make an Appointment</h3>
+            <!-- Appointment Form -->
+            <form id="appointmentForm">
+              <!-- Name and Surname -->
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
+                </div>
+              </div>
+              <!-- Cellphone and Telephone -->
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <input type="tel" class="form-control" id="cellphone" placeholder="Cellphone" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <input type="tel" class="form-control" id="telephone" placeholder="Telephone">
+                </div>
+              </div>
+              <!-- Email Address -->
+              <div class="form-group">
+                <input type="email" class="form-control" id="email" placeholder="Email Address" required>
+              </div>
+              <!-- Subject Title -->
+              <div class="form-group">
+                <input type="text" class="form-control" id="subject" placeholder="Subject Title" required>
+              </div>
+              <!-- Description -->
+              <div class="form-group">
+                <textarea class="form-control" id="description" rows="4" placeholder="Description"></textarea>
+              </div>
+              <br>
+              <!-- Submit Button -->
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
         </div>
       </div>
     </section>
@@ -75,17 +113,19 @@
           <div class="footer-links">
             <p class="footer-label">Follow Us:</p>
             <!-- Facebook icon: https://www.flaticon.com/free-icons/facebook -->
-            <a href="https://www.facebook.com/GraceWellMC/"><img src="/GracewellCommunity.github.io/website_images/facebook-logo(edited).png" alt="facebook" class="footer-image"></a>
+            <a href="https://www.facebook.com/GraceWellMC/"><img src="././website_images/facebook-logo(edited).png"
+                alt="facebook" class="footer-image"></a>
             <!-- Instagram icon: https://www.flaticon.com/free-icons/instagram-sketched -->
-            <a href="https://za.linkedin.com/in/gracewell-methodist-church-807389219"><img src="/GracewellCommunity.github.io/website_images/instagram-logo(edited).png" alt="instagram" class="footer-image"></a>
+            <a href="https://za.linkedin.com/in/gracewell-methodist-church-807389219"><img
+                src="././website_images/instagram-logo(edited).png" alt="instagram" class="footer-image"></a>
             <!-- LinkedIn icon: https://www.flaticon.com/free-icons/linkedin -->
-            <a href="#"><img src="/GracewellCommunity.github.io/website_images/linkedin-square-logo(edited).png" alt="linkedin"
+            <a href="#"><img src="././website_images/linkedin-square-logo(edited).png" alt="linkedin"
                 class="footer-image"></a>
             <p class="footer-label" style="margin-left: 30px;">Download Our App:</p>
             <!--App Store Icon: https://www.flaticon.com/free-icons/app-->
-            <a href="#"><img src="/GracewellCommunity.github.io/website_images/app-store-logo(edited).png" alt="appstore" class="footer-image"></a>
+            <a href="#"><img src="././website_images/app-store-logo(edited).png" alt="appstore" class="footer-image"></a>
             <!--Play Store: https://www.flaticon.com/free-icons/playstore-->
-            <a href="#"><img src="/GracewellCommunity.github.io/website_images/google-playstore-logo(edited).png" alt="playstore"
+            <a href="#"><img src="././website_images/google-playstore-logo(edited).png" alt="playstore"
                 class="footer-image"></a>
           </div>
         </div>
@@ -100,7 +140,82 @@
   <!-- Vue.js CDN -->
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
   <!-- Custom JavaScript code -->
-  <script src="/GracewellCommunity.github.io/js_files/global.js"></script>
+  <script src="././js_files/global.js"></script>
+
+  <script type="module">
+        // Import the functions you need from the SDKs you need
+       import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+       import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js";
+       import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyAMipDrnQjCPbwlN8S39TIOyCC11NC7Zbc",
+            authDomain: "gracewelldatabasewebapp.firebaseapp.com",
+            databaseURL: "https://gracewelldatabasewebapp-default-rtdb.firebaseio.com",
+            projectId: "gracewelldatabasewebapp",
+            storageBucket: "gracewelldatabasewebapp.appspot.com",
+            messagingSenderId: "1060415129924",
+            appId: "1:1060415129924:web:e18f89a5c3f106eae1ef11",
+            measurementId: "G-X70R9XKT64"
+        };
+        
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    
+            function redirectToLoginPage() {
+                // Redirect the user to the login page
+                window.location.href = "/GracewellCommunity.github.io/login_page.html";
+            }
+    
+        function registerUser() {
+            console.log('Button clicked')
+            const database = getDatabase();
+            
+            // Get user input values
+          name = document.getElementById('firstName').value;
+          surname = document.getElementById('lastName').value;
+          email = document.getElementById('email').value;
+          subject = document.getElementById('subject').value;
+          description = document.getElementById('description').value;
+          cellPhone = document.getElementById('cellphone').value;
+          telephone = document.getElementById('telephone').value;
+            
+            // Generate a unique user ID 
+            const userId = generateUserId();
+
+    console.log('User input:', name, surname, email, subject, description, cellPhone, telephone);
+            
+            // Write user data to the database
+            set(ref(database, 'Appointments/' + userId), {
+                name: name,
+                surname: surname,
+                email: email,
+                subject: subject,
+                description: description,
+                cellPhone: cellPhone,
+                telephone: telephone,
+                password: password
+            }).then(() => {
+                console.log('Appointment request submitted');
+            }).catch((error) => {
+                console.error('Error Submitting request :', error);
+            });
+            alert("Thank you for your input. The Admin will now process...");
+    
+        }
+    
+        function generateUserId() {
+            const prefix = "gw";
+            const randomNumber = Math.floor(Math.random() * 10000); // Generate a random number between 0 and 9999, used for id with gw
+            return prefix + randomNumber;
+        }
+      </script>
+
 </body>
 
 </html>
