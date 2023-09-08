@@ -32,7 +32,7 @@
   <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-auth.js"></script>
 
 <script> 
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-app.js";
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-app.js";
     import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-database.js";
     import { getAuth, sendPasswordResetEmail } from "firebase/auth";
 
@@ -50,7 +50,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.0/firebas
     const database= getDatabase(app);
     const auth = getAuth();
 
-$("#btn-resetPassword").click(function()
+$("#resetbtn").click(function()
 {
    var auth = firebase.auth();
    var email = $("#email").val();
