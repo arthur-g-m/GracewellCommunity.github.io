@@ -32,9 +32,6 @@
   <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-auth.js"></script>
 
 <script> 
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-app.js";
-    import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-database.js";
-    import { getAuth, sendPasswordResetEmail } from "firebase/auth";
 
     const firebaseConfig = {
       apiKey: "AIzaSyDhys7Y81Z0oyo10M1hIzg8t2wQIxxFMYA",
@@ -50,25 +47,18 @@
     const database= getDatabase(app);
     const auth = getAuth();
 
-$("#resetbtn").click(function()
-{
-   var auth = firebase.auth();
-   var email = $("#email").val();
+$("#resetbtn").click(function () {
+      const email = $("#email").val();
 
-   auth.sendPasswordResetEmail(email).then(function()
-   {
-      window.alert("Email has been sent, please check and verify");
-   })
-   .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-
-    alert(errorMessage);
-    // ..
-  
-
-     });
-});
+      auth.sendPasswordResetEmail(email)
+        .then(() => {
+          window.alert("Email has been sent, please check and verify");
+        })
+        .catch((error) => {
+          const errorMessage = error.message;
+          alert(errorMessage);
+        });
+    });
 </script>
 
 </body>
@@ -76,38 +66,49 @@ $("#resetbtn").click(function()
 </html>
 
 <!--<script>
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-app.js";
-    import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-database.js";
-    import { getAuth, sendPasswordResetEmail } from "firebase/auth";
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+  <div class="recovery-container">
+    <div class="recovery-form">
+      <h1>Account recovery</h1>
+      <form id="recovery-form">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <button id="resetbtn" name="resetbtn" type="button">Recover</button>
+        <p>I know my details <a href="./login_page.html">Login</a> instead</p>
+        <p>Don't have a membership. <a href="./register_page.html">Register</a></p>
+      </form>
+    </div>
+  </div>
 
-    const firebaseConfig = {
-      apiKey: "AIzaSyDhys7Y81Z0oyo10M1hIzg8t2wQIxxFMYA",
-      authDomain: "gracewellweb.firebaseapp.com",
-      databaseURL: "https://gracewellweb-default-rtdb.firebaseio.com",
-      projectId: "gracewellweb",
-      storageBucket: "gracewellweb.appspot.com",
-      messagingSenderId: "652542325461",
-      appId: "1:652542325461:web:59f3b4b82c09eedc4a285c"
-    };
+  <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-auth.js"></script>
 
-    const app = initializeApp(firebaseConfig);
-    const database= getDatabase(app);
-    const auth = getAuth();
+  <script>
+    const firebaseConfig = {
+      // Your Firebase configuration here...
+    };
 
-    document.getElementById("recovery-form").addEventListener("submit", function (e) {
-      e.preventDefault();
-      const email = document.getElementById("email").value;
+    firebase.initializeApp(firebaseConfig);
 
-auth.sendPasswordResetEmail(email)
-  .then(() => {
-    alert("Account recovery has been communicated, please check your emails");
-  })
-  .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    console.error("Error:", errorMessage)
-    // ..
-  });
-});
+    const auth = firebase.auth();
 
+    document.getElementById("resetbtn").addEventListener("click", function () {
+      const email = document.getElementById("email").value;
+
+      auth.sendPasswordResetEmail(email)
+        .then(() => {
+          window.alert("Email has been sent, please check and verify");
+        })
+        .catch((error) => {
+          const errorMessage = error.message;
+          alert(errorMessage);
+        });
+    });
+  </script>
+</body>
+</html>
 </script>-->
