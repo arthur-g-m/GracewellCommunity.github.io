@@ -162,7 +162,7 @@ const firebaseConfig = {
   document.getElementById('appointmentForm').addEventListener("submit", submitForm)
 
  function submitForm(e){
-  e.preventdefault();
+  e.preventDefault();
    
     var firstName = document.getElementById('firstName').value;
     var lastName = document.getElementById('lastName').value;
@@ -176,8 +176,8 @@ const firebaseConfig = {
     saveAPTform = ( firstName, lastName, cellphone, telephone, email, subject, description);
  }
 
- const saveAPTform = ( firstName, lastName, cellphone, telephone, email, subject, description) => {
-    new aptForm = AptFormDB.push();
+ function saveAPTform( firstName, lastName, cellphone, telephone, email, subject, description){
+    var aptForm = AptFormDB.push();
 
     aptForm.set({
           firstName: firstName,
@@ -188,9 +188,10 @@ const firebaseConfig = {
           subject: subject,
           description: description,
     })
+    alert("Form Submitted")
  }
 
- const getElementVal = (id) => {
+ function getElementVal (id) {
         return document.getElementById(id).value;
  }
 
