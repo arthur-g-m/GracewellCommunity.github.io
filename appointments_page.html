@@ -162,7 +162,7 @@ const firebaseConfig = {
   document.getElementById('appointmentForm').addEventListener("submit", submitForm)
 
  function submitForm(e){
-  e.preventDefault();
+  e.preventdefault();
    
     var firstName = document.getElementById('firstName').value;
     var lastName = document.getElementById('lastName').value;
@@ -176,8 +176,8 @@ const firebaseConfig = {
     saveAPTform = ( firstName, lastName, cellphone, telephone, email, subject, description);
  }
 
- function saveAPTform( firstName, lastName, cellphone, telephone, email, subject, description){
-    var aptForm = AptFormDB.push();
+ const saveAPTform = ( firstName, lastName, cellphone, telephone, email, subject, description) => {
+    new aptForm = AptFormDB.push();
 
     aptForm.set({
           firstName: firstName,
@@ -188,77 +188,11 @@ const firebaseConfig = {
           subject: subject,
           description: description,
     })
-    alert("Form Submitted")
  }
 
- function getElementVal (id) {
+ const getElementVal = (id) => {
         return document.getElementById(id).value;
  }
-
-
-
-/*
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-app.js";
-  import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-database.js";
-  import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-auth.js";
-
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
-  // Your web app's Firebase configuration
-  const firebaseConfig = {
-    apiKey: "AIzaSyDhys7Y81Z0oyo10M1hIzg8t2wQIxxFMYA",
-    authDomain: "gracewellweb.firebaseapp.com",
-    databaseURL: "https://gracewellweb-default-rtdb.firebaseio.com",
-    projectId: "gracewellweb",
-    storageBucket: "gracewellweb.appspot.com",
-    messagingSenderId: "652542325461",
-    appId: "1:652542325461:web:59f3b4b82c09eedc4a285c"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const database = getDatabase(app);
-  const auth = getAuth();
-
-  appointmentButton.addEventListener('click', (e) => {
-
-    var firstName = document.getElementById('firstName').value;
-    var lastName = document.getElementById('lastName').value;
-    var cellphone = document.getElementById('cellphone').value;
-    var telephone = document.getElementById('telephone').value;
-    var email = document.getElementById('email').value;
-    var subject = document.getElementById('subject').value;
-    var description = document.getElementById('description').value;
-
-
-    createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        // Signed in 
-        const appointments = userCredential.appointments;
-
-        alert("Approintment registered succesfully!");
-
-        set(ref(database, 'appointments/' + appointments.uid), {
-          firstName: firstName,
-          lastName: lastName,
-          cellphone: cellphone,
-          telephone: telephone,
-          email: email,
-          subject: subject,
-          description: description,
-        })
-        // ...
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-
-        alert(errorMessage);
-        // ..
-      });
-  });*/
 </script>
 
 </html>
