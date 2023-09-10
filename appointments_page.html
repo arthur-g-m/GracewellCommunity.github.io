@@ -181,8 +181,9 @@
     var description = document.getElementById('description').value;
 
   alert("Form submitted!!");
+  const appointmentId = database.ref('Appointments').push().key;
 
-  set(ref(database, 'Appointments/' + uid), {
+  set(ref(database, 'Appointments/' + appointmentId), {
           firstName: firstName,
           lastName: lastName,
           cellphone: cellphone,
