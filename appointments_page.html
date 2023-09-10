@@ -177,7 +177,7 @@ const firebaseConfig = {
  }
 
  const saveAPTform = ( firstName, lastName, cellphone, telephone, email, subject, description) => {
-    new aptForm = AptFormDB.push();
+    var aptForm = AptFormDB.push();
 
     aptForm.set({
           firstName: firstName,
