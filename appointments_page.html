@@ -10,6 +10,7 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="././css_files/appointments_page.css">
   <link rel="stylesheet" href="././css_files/global.css">
+  <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-app.js"></script>
 </head>
 
 <body>
@@ -155,7 +156,7 @@ const firebaseConfig = {
     appId: "1:652542325461:web:59f3b4b82c09eedc4a285c"
   };
 
-  const app = initializeApp(firebaseConfig);
+  const app = firebase.initializeApp(firebaseConfig);
 
   var AptFormDB = firebase.database().ref("appointmentForm");
 
@@ -172,8 +173,7 @@ const firebaseConfig = {
     var subject = document.getElementById('subject');
     var description = document.getElementById('description');
 
-    console.log(name, email, subject);
-    saveAPTform = ( firstName, lastName, cellphone, telephone, email, subject, description);
+    saveAPTform(firstName.value, lastName.value, cellphone.value, telephone.value, email.value, subject.value, description.value);
  }
 
  const saveAPTform = ( firstName, lastName, cellphone, telephone, email, subject, description) => {
