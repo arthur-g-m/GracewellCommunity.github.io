@@ -182,7 +182,7 @@
 
   alert("Form submitted!!");
 
-  set(ref(database, 'Appointments/'), {
+  set(ref(database, 'Appointments/' + uid), {
           firstName: firstName,
           lastName: lastName,
           cellphone: cellphone,
