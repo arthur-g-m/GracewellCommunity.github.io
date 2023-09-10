@@ -180,8 +180,9 @@
     var subject = document.getElementById('subject').value;
     var description = document.getElementById('description').value;
 
-    alert("Form submitted!!");
-  set(ref(database, 'Appointments/' ), {
+  alert("Form submitted!!");
+
+  set(ref(database, 'Appointments/'), {
           firstName: firstName,
           lastName: lastName,
           cellphone: cellphone,
