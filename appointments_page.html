@@ -180,10 +180,8 @@
     var subject = document.getElementById('subject').value;
     var description = document.getElementById('description').value;
 
-  alert("Form submitted!!");
-  const appointmentId = generateUniqueId();
-
-  set(ref(database, 'Appointments/' + appointmentId), {
+    alert("Form submitted!!");
+  set(ref(database, 'Appointments/' ), {
           firstName: firstName,
           lastName: lastName,
           cellphone: cellphone,
