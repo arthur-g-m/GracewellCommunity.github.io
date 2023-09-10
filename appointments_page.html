@@ -155,7 +155,7 @@ const firebaseConfig = {
     appId: "1:652542325461:web:59f3b4b82c09eedc4a285c"
   };
 
-  firebase.initializeApp(firebaseConfig);
+  const app = initializeApp(firebaseConfig);
 
   var AptFormDB = firebase.database().ref("appointmentForm");
 
