@@ -181,7 +181,7 @@
     var description = document.getElementById('description').value;
 
   alert("Form submitted!!");
-  const appointmentId = database.ref('Appointments').push().key;
+  const appointmentId = generateUniqueId();
 
   set(ref(database, 'Appointments/' + appointmentId), {
           firstName: firstName,
