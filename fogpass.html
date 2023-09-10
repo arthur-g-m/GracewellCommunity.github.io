@@ -43,6 +43,7 @@
         const auth = firebase.auth();
 
         document.getElementById("resetbtn").addEventListener("click", () => {
+          console.log("Button clicked");
             const email = document.getElementById("email").value;
 
             auth.sendPasswordResetEmail(email)
