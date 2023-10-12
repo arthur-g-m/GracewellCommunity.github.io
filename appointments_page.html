@@ -25,11 +25,13 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item"><a class="nav-link" href="././home_page.html" target="_self">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="././about_page.html" target="_self">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="././about_page.html" target="_self">About</a></li>
           <li class="nav-item"><a class="nav-link" href="././contact_page.html" target="_self">Contact</a></li>
           <li class="nav-item"><a class="nav-link" href="././donations_page.html" target="_self">Donations</a></li>
-          <li class="nav-item"><a class="nav-link" href="././appointments_page.html" target="_self">Appointments</a></li>
-          <li class="nav-item"><a class="nav-link" href="././get_involved_page.html" target="_self">Get Involved</a></li>
+          <li class="nav-item"><a class="nav-link" href="././appointments_page.html" target="_self">Appointments</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="././get_involved_page.html" target="_self">Get Involved</a>
+          </li>
           <li class="nav-item"><a class="nav-link" href="#">Sign In</a></li>
         </ul>
       </div>
@@ -49,86 +51,93 @@
 
     <!-- Page content -->
     <section class="content-section">
-      <div class="container">
-        <h1 class="content-header">Appointments</h1>
-        <div class="row">
-          <!-- Left side content -->
-          <div class="col-md-6">
-            <h3 class="content-header">Instructions</h3>
+      <h1 class="content-header">Appointments</h1>
+      <div class="row">
+        <!-- Left side content -->
+        <div class="col-md-6">
+          <h3 class="content-header">Instructions</h3>
 
-            <p><strong>1. Fill out Your Personal Information:</strong> Enter your <strong>First Name</strong> and <strong>Last Name</strong> in the respective fields. Provide your <strong>Cellphone</strong> number, which is required for contact. Optionally, you can also provide your <strong>Telephone</strong> number. Enter your <strong>Email Address</strong> so we can get in touch with you regarding your appointment.</p>
+          <p><strong>1. Fill out Your Personal Information:</strong> Enter your <strong>First Name</strong> and
+            <strong>Last Name</strong> in the respective fields. Provide your <strong>Cellphone</strong> number, which
+            is required for contact. Optionally, you can also provide your <strong>Telephone</strong> number. Enter your
+            <strong>Email Address</strong> so we can get in touch with you regarding your appointment.</p>
 
-            <p><strong>2. Specify the Appointment Details and Submit Your Request:</strong> In the <strong>Subject Title</strong> field, briefly describe the purpose or topic of your appointment. In the <strong>Description</strong> field, provide more details about what you would like to discuss during the appointment. Once you've filled out all the necessary information, click the <strong>Submit</strong> button to send your appointment request.</p>
+          <p><strong>2. Specify the Appointment Details and Submit Your Request:</strong> In the <strong>Subject
+              Title</strong> field, briefly describe the purpose or topic of your appointment. In the
+            <strong>Description</strong> field, provide more details about what you would like to discuss during the
+            appointment. Once you've filled out all the necessary information, click the <strong>Submit</strong> button
+            to send your appointment request.</p>
 
-            <p><strong>3. Confirmation Email:</strong> Our church team will review your request and get back to you as soon as possible via the email address you provided. After submitting the form, you will receive a confirmation email acknowledging your request.</p>
-          </div>
-          <!-- Right side content -->
-          <div class="col-md-6">
-            <h3 class="content-header">Make an Appointment</h3>
-            <!-- Appointment Form -->
-            <form id="appointmentForm">
-              <!-- Name and Surname -->
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" required>
-                </div>
-                <div class="form-group col-md-6">
-                  <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name" required>
-                </div>
+          <p><strong>3. Confirmation Email:</strong> Our church team will review your request and get back to you as
+            soon as possible via the email address you provided. After submitting the form, you will receive a
+            confirmation email acknowledging your request.</p>
+        </div>
+        <!-- Right side content -->
+        <div class="col-md-6">
+          <h3 class="content-header">Make an Appointment</h3>
+          <!-- Appointment Form -->
+          <form id="appointmentForm">
+            <!-- Name and Surname -->
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name"
+                  required>
               </div>
-              <!-- Cellphone and Telephone -->
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <input type="tel" class="form-control" id="cellphone" name="cellphone" placeholder="Cellphone" required>
-                </div>
-                <div class="form-group col-md-6">
-                  <input type="tel" class="form-control" id="telephone" name="telephone" placeholder="Telephone">
-                </div>
+              <div class="form-group col-md-6">
+                <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name" required>
               </div>
-              <!-- Email Address -->
-              <div class="form-group">
-                <input type="email" class="form-control" id="email" name="email" placeholder="Email Address" required>
+            </div>
+            <!-- Cellphone and Telephone -->
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <input type="tel" class="form-control" id="cellphone" name="cellphone" placeholder="Cellphone" required>
               </div>
-              <!-- Subject Title -->
-              <div class="form-group">
-                <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject Title" required>
+              <div class="form-group col-md-6">
+                <input type="tel" class="form-control" id="telephone" name="telephone" placeholder="Telephone">
               </div>
-              <!-- Description -->
-              <div class="form-group">
-                <textarea class="form-control" id="description" name="description" rows="4" placeholder="Description"></textarea>
-              </div>
-              <br>
-              <!-- Submit Button -->
-            </form>
-            <button id='signUpButton' name="signUpButton" class="btn btn-primary" value="Sign Up" > Submit</button>
-          </div>
+            </div>
+            <!-- Email Address -->
+            <div class="form-group">
+              <input type="email" class="form-control" id="email" name="email" placeholder="Email Address" required>
+            </div>
+            <!-- Subject Title -->
+            <div class="form-group">
+              <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject Title" required>
+            </div>
+            <!-- Description -->
+            <div class="form-group">
+              <textarea class="form-control" id="description" name="description" rows="4"
+                placeholder="Description"></textarea>
+            </div>
+            <br>
+            <!-- Submit Button -->
+          </form>
+          <button id='signUpButton' name="signUpButton" class="btn btn-primary" value="Sign Up"> Submit</button>
         </div>
       </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-      <div class="container">
-        <div class="footer-content">
-          <p class="footer-label">© GraceWell Methodist Church. All rights reserved.</p>
-          <div class="footer-links">
-            <p class="footer-label">Follow Us:</p>
-            <!-- Facebook icon: https://www.flaticon.com/free-icons/facebook -->
-            <a href="https://www.facebook.com/GraceWellMC/"><img src="././website_images/facebook-logo(edited).png"
-                alt="facebook" class="footer-image"></a>
-            <!-- Instagram icon: https://www.flaticon.com/free-icons/instagram-sketched -->
-            <a href="https://www.instagram.com/gracewellmc/"><img
-                src="././website_images/instagram-logo(edited).png" alt="instagram" class="footer-image"></a>
-            <!-- LinkedIn icon: https://www.flaticon.com/free-icons/linkedin -->
-            <a href="https://za.linkedin.com/in/gracewell-methodist-church-807389219"><img src="././website_images/linkedin-square-logo(edited).png" alt="linkedin"
-                class="footer-image"></a>
-            <p class="footer-label" style="margin-left: 30px;">Download Our App:</p>
-            <!--App Store Icon: https://www.flaticon.com/free-icons/app-->
-            <a href="#"><img src="././website_images/app-store-logo(edited).png" alt="appstore" class="footer-image"></a>
-            <!--Play Store: https://www.flaticon.com/free-icons/playstore-->
-            <a href="#"><img src="././website_images/google-playstore-logo(edited).png" alt="playstore"
-                class="footer-image"></a>
-          </div>
+      <div class="footer-content">
+        <p class="footer-label">© GraceWell Methodist Church. All rights reserved.</p>
+        <div class="footer-links">
+          <p class="footer-label">Follow Us:</p>
+          <!-- Facebook icon: https://www.flaticon.com/free-icons/facebook -->
+          <a href="https://www.facebook.com/GraceWellMC/"><img src="././website_images/facebook-logo(edited).png"
+              alt="facebook" class="footer-image"></a>
+          <!-- Instagram icon: https://www.flaticon.com/free-icons/instagram-sketched -->
+          <a href="https://www.instagram.com/gracewellmc/"><img src="././website_images/instagram-logo(edited).png"
+              alt="instagram" class="footer-image"></a>
+          <!-- LinkedIn icon: https://www.flaticon.com/free-icons/linkedin -->
+          <a href="https://za.linkedin.com/in/gracewell-methodist-church-807389219"><img
+              src="././website_images/linkedin-square-logo(edited).png" alt="linkedin" class="footer-image"></a>
+          <p class="footer-label" style="margin-left: 30px;">Download Our App:</p>
+          <!--App Store Icon: https://www.flaticon.com/free-icons/app-->
+          <a href="#"><img src="././website_images/app-store-logo(edited).png" alt="appstore" class="footer-image"></a>
+          <!--Play Store: https://www.flaticon.com/free-icons/playstore-->
+          <a href="#"><img src="././website_images/google-playstore-logo(edited).png" alt="playstore"
+              class="footer-image"></a>
         </div>
       </div>
     </footer>
@@ -149,7 +158,7 @@
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-app.js";
   import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-database.js";
   import { getAuth } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-auth.js";
-  
+
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -166,12 +175,12 @@
 
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
-  const database= getDatabase(app);
+  const database = getDatabase(app);
   const auth = getAuth();
 
 
-  signUpButton.addEventListener('click',(e)=>{
-      
+  signUpButton.addEventListener('click', (e) => {
+
     var firstName = document.getElementById('firstName').value;
     var lastName = document.getElementById('lastName').value;
     var cellphone = document.getElementById('cellphone').value;
@@ -180,77 +189,31 @@
     var subject = document.getElementById('subject').value;
     var description = document.getElementById('description').value;
 
-  alert("Form submitted!!");
+    alert("Form submitted!!");
 
-  set(ref(database, 'Appointments/'), {
-          firstName: firstName,
-          lastName: lastName,
-          cellphone: cellphone,
-          telephone: telephone,
-          email: email,
-          subject: subject,
-          description: description,
-        })
-  // ...
-.catch((error) => {
-  const errorCode = error.code;
-  const errorMessage = error.message;
+      
+      const appointmentsRef = ref(database, 'Appointments');
+      const newAppointmentRef = push(appointmentsRef); // Generate a unique key for the appointment
 
-  alert(errorMessage);
-  // ..
-});
-  });
-    </script>
-
-<!--<script type="module">
-
-const firebaseConfig = {
-    apiKey: "AIzaSyDhys7Y81Z0oyo10M1hIzg8t2wQIxxFMYA",
-    authDomain: "gracewellweb.firebaseapp.com",
-    databaseURL: "https://gracewellweb-default-rtdb.firebaseio.com",
-    projectId: "gracewellweb",
-    storageBucket: "gracewellweb.appspot.com",
-    messagingSenderId: "652542325461",
-    appId: "1:652542325461:web:59f3b4b82c09eedc4a285c"
-  };
-
-  const app = firebase.initializeApp(firebaseConfig);
-
-  var AptFormDB = firebase.database().ref("appointmentForm");
-
-  document.getElementById('appointmentForm').addEventListener("submit", submitForm)
-
- function submitForm(e){
-  e.preventDefault();
-   
-    var firstName = document.getElementById('firstName');
-    var lastName = document.getElementById('lastName');
-    var cellphone = document.getElementById('cellphone');
-    var telephone = document.getElementById('telephone');
-    var email = document.getElementById('email');
-    var subject = document.getElementById('subject');
-    var description = document.getElementById('description');
-
-    saveAPTform(firstName.value, lastName.value, cellphone.value, telephone.value, email.value, subject.value, description.value);
- }
-
- const saveAPTform = ( firstName, lastName, cellphone, telephone, email, subject, description) => {
-    var aptForm = AptFormDB.push();
-
-    aptForm.set({
-          firstName: firstName,
-          lastName: lastName,
-          cellphone: cellphone,
-          telephone: telephone,
-          email: email,
-          subject: subject,
-          description: description,
+  // set(ref(database, 'Appointments/') previous
+  set(newAppointmentRef,{
+      firstName: firstName,
+      lastName: lastName,
+      cellphone: cellphone,
+      telephone: telephone,
+      email: email,
+      subject: subject,
+      description: description,
     })
- }
+      // ...
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
 
- const getElementVal = (id) => {
-  return document.getElementById(id).value;
- }
-</script>-->
+        alert(errorMessage);
+        // ..
+      });
+  });
+</script>
 
 </html>
