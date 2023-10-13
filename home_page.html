@@ -176,7 +176,24 @@
   <!-- Custom JavaScript code -->
   <script src="/GracewellCommunity.github.io/js_files/global.js"></script>
   <script src="/GracewellCommunity.github.io/js_files/home_page.js"></script>
-  <script src=""></script>
-</body>
+  <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-auth.js"></script>
 
-</html>
+<script type="module">
+    
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-app.js";
+    import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-auth.js";
+
+    const auth = getAuth();
+
+    onAuthStateChanged(auth, (user) => {
+  if (user) {
+    window.location.href = "/GracewellCommunity.github.io/home_page.html"; 
+  } else {
+    if (!user) {
+  window.location.href = "/login.html"; // Redirect to the login page
+}  }
+});
+
+  
+  </script>
+  </html>
