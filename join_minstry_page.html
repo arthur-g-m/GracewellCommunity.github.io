@@ -217,6 +217,7 @@
 
 
   signUpButton.addEventListener('click', (e) => {
+    e.preventDefault();
 
     var Ministry = document.querySelector('input[name="Ministry"]:checked').value;
     var firstName = document.getElementById('firstName').value;
@@ -239,8 +240,8 @@
       cellphone: cellphone,
       telephone: telephone,
       email: email,
-      subject: subject,
-      description: description,
+      Ministry: Ministry,
+      appointmentDate: appointmentDate,
     })
       // ...
       .catch((error) => {
