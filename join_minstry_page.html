@@ -229,10 +229,10 @@
     alert("Form submitted!!");
 
       
-      const appointmentsRef = ref(database, 'Appointments');
+      const appointmentsRef = ref(database, 'Join Ministry Applicants');
       const newAppointmentRef = push(appointmentsRef); // Generate a unique key for the appointment
 
-  // set(ref(database, 'Appointments/') previous
+  // set(ref(database, 'Join Ministry Applicants/') previous
   set(newAppointmentRef,{
       firstName: firstName,
       lastName: lastName,
