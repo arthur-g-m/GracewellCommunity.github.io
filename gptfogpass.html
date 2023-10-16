@@ -16,15 +16,12 @@
 <body>
   <div class="recovery-container">
     <div class="recovery-form">
-      <!--<div class="logo"></div>
-      -->
       <h1>Account recovery</h1>
       <form id="recovery-form">
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" placeholder="Enter your email" required>
-        <button id='resetbtn' name="resetbtn" type="button">Recover</button>
+        <button id="resetbtn" name="resetbtn" type="button">Recover</button>
         <p>I know my details <a href="./login_page.html">Login</a> instead</p>
-        <!-- Linking the sign-up page -->
         <p>Don't have a membership. <a href="./register_page.html">Register</a></p>
       </form>
     </div>
@@ -32,11 +29,12 @@
 
   <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-auth.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
   <script>
-    // Initializing Firebase 
+    // Initialize Firebase with your configuration
     const firebaseConfig = {
-        apiKey: "AIzaSyDhys7Y81Z0oyo10M1hIzg8t2wQIxxFMYA",
+      apiKey: "AIzaSyDhys7Y81Z0oyo10M1hIzg8t2wQIxxFMYA",
       authDomain: "gracewellweb.firebaseapp.com",
       databaseURL: "https://gracewellweb-default-rtdb.firebaseio.com",
       projectId: "gracewellweb",
@@ -46,7 +44,7 @@
     };
 
     const app = firebase.initializeApp(firebaseConfig);
-    const auth = firebase.auth();
+    const auth = app.auth();
 
     $("#resetbtn").click(function () {
       var email = $("#email").val();
