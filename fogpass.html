@@ -33,10 +33,7 @@
     </div>
 
 <script> 
-    //import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-app.js";
-    //import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-database.js";
-    //import { getAuth, sendPasswordResetEmail } from "firebase/auth";
-
+    
     const firebaseConfig = {
       apiKey: "AIzaSyDhys7Y81Z0oyo10M1hIzg8t2wQIxxFMYA",
       authDomain: "gracewellweb.firebaseapp.com",
@@ -47,14 +44,14 @@
       appId: "1:652542325461:web:59f3b4b82c09eedc4a285c"
     };
 
-    const app = initializeApp(firebaseConfig);
-    const database= getDatabase(app);
-    const auth = getAuth();
+    const app = firebase.initializeApp(firebaseConfig);
+    const database= firebase.database(app);
+    const auth = firebase.auth();
 
-$("resetbtn").click(function()
+$("#resetbtn").click(function()
 {
    var auth = firebase.auth();
-   var email = $("email").val();
+   var email = $("#email").val();
 
    auth.sendPasswordResetEmail(email).then(function()
    {
