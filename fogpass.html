@@ -30,8 +30,7 @@
         </div>
     </div>
 <script> 
-
-    const firebaseConfig = {
+      const firebaseConfig = {
       apiKey: "AIzaSyDhys7Y81Z0oyo10M1hIzg8t2wQIxxFMYA",
       authDomain: "gracewellweb.firebaseapp.com",
       databaseURL: "https://gracewellweb-default-rtdb.firebaseio.com",
@@ -45,24 +44,27 @@
     const auth = getAuth(app);
 
 $("#resetbtn").click(function()
-{
-   var auth = firebase.auth();
-   var email = $("#email").val();
+{ 
+  var auth = firebase.auth();
+  var email = $("#email").val();
 
-   auth.sendPasswordResetEmail(email).then(function()
-   {
+  if(email != ""){
+    firebase.auth().sendPasswordResetEmail(email)
+  .then(() => {
       window.alert("Email has been sent, please check and verify");
-   })
-   .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-
-    alert(errorMessage);
+  })
+  .catch((error) => {
+    var errorCode = error.code;
+    var errorMessage = error.message;
     // ..
-  
+  });
 
-     });
-});
+  }
+  else
+  {
+    window.alert("Please enter in your email")
+  }
+})
 </script>
 
 </body>
