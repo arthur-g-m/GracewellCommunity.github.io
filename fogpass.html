@@ -50,13 +50,14 @@
     const database= getDatabase(app);
     const auth = getAuth();
 
-$("#resetbtn").click(function()
+$("resetbtn").click(function()
 {
    var auth = firebase.auth();
-   var email = $("#email").val();
+   var email = $("email").val();
 
    auth.sendPasswordResetEmail(email).then(function()
    {
+      console.log("Button clicked");
       window.alert("Email has been sent, please check and verify");
    })
    .catch((error) => {
