@@ -73,7 +73,11 @@
         var email = document.getElementById('email').value;
         var password = document.getElementById('password').value;
 
-      signInWithEmailAndPassword(auth, email, password)
+      
+        if (email === 'admin' && password === 'admin') {
+      // Redirect to 'cmsHome.html' if email and password are 'admin'
+      window.location.href = '././cmsHome.html';
+    } else {  signInWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
     // Signed in 
     const user = userCredential.user;
@@ -93,7 +97,7 @@
     alert(errorMessage);
 
   });
-
+    }
   });
   });
       </script>
