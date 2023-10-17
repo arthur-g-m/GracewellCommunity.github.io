@@ -102,16 +102,17 @@
           <h2 class="content-header">Recent Events</h2>
           <div class="scrolling-images">
             <div class="scrolling-images-inner" v-for="event in events" :key="event.id">
-              <a href="././events_page.html">
+              <a :href="'././events_page.html?id=' + event.id"> <!-- Update the href to pass the event ID -->
                 <img :src="event.imageSrc" :alt="event.title" class="event-image">
               </a>
-              <a href="././events_page.html" style="color: black;">
+              <a :href="'././events_page.html?id=' + event.id" style="color: black;">
                 <p class="event-title">{{ event.title }}</p>
               </a>
             </div>
           </div>
         </div>
       </div>
+      <br>
       <br>
       <div class="row">
 
