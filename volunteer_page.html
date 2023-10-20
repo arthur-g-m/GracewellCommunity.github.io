@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GraceWell Methodist Church</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="././css_files/volunteer_page.css">
+  <link rel="stylesheet" href="././css_files/global.css">
+</head>
+
+<body>
+  <div id="app">
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <a class="navbar-brand" href="././index.html" target="_self"></a>
+    </nav>
+
+    <!-- Header Image with Welcome Message -->
+    <div class="header-image">
+      <a class="back_btn" href="././get_involved_page.html">Back</a>
+      <div class="center-panel">
+        <h1>Matthew 5:42</h1>
+        <p>Give to the one who asks from you, and do not turn away from the one who wants to borrow from you</p>
+      </div>
+    </div>
+
+    <!-- Page content -->
+    <section class="content-section">
+      <h1 style="font-weight: 650">Events for Volunteering</h1>
+      <br>
+      <div class="row">
+        <!-- Left side content -->
+        <div class="col-md-6">
+          <h2 class="content-header">Feed the Needy</h2>
+          <p class="content-paragraph">Come feed the needy and be a source of hope the hungry. Your time and
+            compassion can nourish both body and soul. Join us in this fulfilling mission to bring warmth,
+            nourishment, and smiles to those in need.</p>
+        </div>
+        <!-- Right side image -->
+        <div class="col-md-6 d-flex justify-content-end">
+          <img src="././website_images/pexels-julia-m-cameron-volunteer-1(edited).jpg" alt="Grace Well Church" />
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <!-- Right side image -->
+        <div class="col-md-6">
+          <img src="././website_images/pexels-abel-tan-jun-yang-volunteer-2 (edited).jpg" alt="Grace Well Church" />
+        </div>
+        <!-- Left side content -->
+        <div class="col-md-6 justify-content-end">
+          <h2 class="content-header">Youth Service</h2>
+          <p class="content-paragraph">Elevate the faith of the youth by becoming a youth leader! Our Youth Ministry
+            is a dynamic space where faith, friendships, and personal development converge. Join us for exciting
+            events, engaging discussions, and opportunities to make a positive impact in our community.</p>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <!-- Left side content -->
+        <div class="col-md-6">
+          <h2 class="content-header">Special Preaching</h2>
+          <p class="content-paragraph">Join us for a special preaching service that promises inspiration and spiritual
+            enrichment. Let's come together and explore the timeless wisdom of the Word. See you there!</p>
+        </div>
+        <!-- Right side image -->
+        <div class="col-md-6 d-flex justify-content-end">
+          <img src="././website_images/Grace_Well_Church.jpg" alt="Grace Well Church" />
+        </div>
+      </div>
+      <br>
+      <hr>
+      <div class="row">
+        <!-- Left side content -->
+        <div class="col-md-6">
+          <h3 class="content-header">Instructions</h3>
+
+          <p><strong>1. Provide Your Personal Information:</strong> Begin by entering your <strong>First Name</strong>
+            and <strong>Last Name</strong>. Additionally, please share your <strong>Cellphone</strong> number for
+            contact purposes, and feel free to include your <strong>Telephone</strong> number if you wish. We'll need
+            your <strong>Email Address</strong> to reach out to you regarding your volunteer registration, so please
+            make sure it's accurate. Enter your <strong>Date of Birth</strong> to help us better coordinate volunteer
+            opportunities.</p>
+
+          <p><strong>2. Select the Volunteer Event:</strong> Choose the church-related activity or event you're
+            interested in volunteering for from the dropdown list under <strong>Volunteer Event</strong>. Options may
+            include Ushers, Feed the Needy, Youth Service, Media Team, and more.</p>
+
+          <p><strong>3. Confirmation Email:</strong> After submitting the form, you will promptly receive a confirmation
+            email confirming your successful volunteer registration. Our church team will review your registration and
+            contact you through the email address you provided. We'll discuss further details and next steps for your
+            volunteer involvement.</p>
+        </div>
+        <!-- Right side content -->
+        <div class="col-md-6">
+          <h3 class="content-header">Become a Volunteer</h3>
+          <!-- Volunteer Form -->
+          <form id="volunteerForm">
+            <!-- Name and Surname -->
+            <div class="form-group">
+              <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" required>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name" required>
+            </div>
+            <!-- Cellphone and Telephone -->
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <input type="tel" class="form-control" id="cellphone" name="cellphone" placeholder="Cellphone" required>
+              </div>
+              <div class="form-group col-md-6">
+                <input type="tel" class="form-control" id="telephone" name="telephone" placeholder="Telephone">
+              </div>
+            </div>
+            <!-- Email Address -->
+            <div class="form-group">
+              <input type="email" class="form-control" id="email" name="email" placeholder="Email Address" required>
+            </div>
+            <!-- Combo Box (Select Dropdown) for Appointment Type -->
+            <div class="form-group">
+              <label for="volunteerFor">Volunteer Event</label>
+              <select class="form-control" id="volunteerFor" name="volunteerFor" required>
+                <option value="Ushers" name="Ushers">Feed the Needy</option>
+                <option value="Church Band" name="Church Band">Youth Service</option>
+                <option value="Media Team" name="Media Team">Special Preachinf</option>
+                <!-- Add more options as needed -->
+              </select>
+            </div>
+            <!-- Email Address and Date Picker-->
+            <div class="form-group">
+              <label for="dateOfBirth">Date of Birth</label>
+              <input type="date" class="form-control" id="dateOfBirth" name="dateOfBirth" required>
+            </div>
+            <!-- Submit Button -->
+            <button id='signUpButton' name="signUpButton" type="submit" value="Sign Up" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <p class="footer-label">© GraceWell Methodist Church. All rights reserved.</p>
+        <div class="footer-links">
+          <p class="footer-label">Follow Us:</p>
+          <!-- Facebook icon: https://www.flaticon.com/free-icons/facebook -->
+          <a href="https://www.facebook.com/GraceWellMC/"><img src="././website_images/facebook-logo(edited).png"
+              alt="facebook" class="footer-image"></a>
+          <!-- Instagram icon: https://www.flaticon.com/free-icons/instagram-sketched -->
+          <a href="https://www.instagram.com/gracewellmc/"><img src="././website_images/instagram-logo(edited).png"
+              alt="instagram" class="footer-image"></a>
+          <!-- LinkedIn icon: https://www.flaticon.com/free-icons/linkedin -->
+          <a href="https://za.linkedin.com/in/gracewell-methodist-church-807389219"><img
+              src="././website_images/linkedin-square-logo(edited).png" alt="linkedin" class="footer-image"></a>
+          <p class="footer-label" style="margin-left: 30px;">Download Our App:</p>
+          <!--App Store Icon: https://www.flaticon.com/free-icons/app-->
+          <a href="#"><img src="././website_images/app-store-logo(edited).png" alt="appstore" class="footer-image"></a>
+          <!--Play Store: https://www.flaticon.com/free-icons/playstore-->
+          <a href="#"><img src="././website_images/google-playstore-logo(edited).png" alt="playstore"
+              class="footer-image"></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <!-- Bootstrap JS (Popper.js and jQuery are required for Bootstrap) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- Vue.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <!-- Custom JavaScript code -->
+  <script src="././js_files/global.js"></script>
+</body>
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-app.js";
+  import { getDatabase, ref, set, push } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-database.js";
+  import { getAuth } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-auth.js";
+
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+      apiKey: "AIzaSyBW95P-YZ0GWJDdc_VYF8KC5VhDU5y9278",
+      authDomain: "gracewelldatabase.firebaseapp.com",
+      databaseURL: "https://gracewelldatabase-default-rtdb.europe-west1.firebasedatabase.app",
+      projectId: "gracewelldatabase",
+      storageBucket: "gracewelldatabase.appspot.com",
+      messagingSenderId: "373455644093",
+      appId: "1:373455644093:web:fdf02a68760c1d7c95ded4",
+      measurementId: "G-QE913070ZV"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const database = getDatabase(app);
+  const auth = getAuth();
+
+  signUpButton.addEventListener('click', (e) => {
+
+    var firstName = document.getElementById('firstName').value;
+    var lastName = document.getElementById('lastName').value;
+    var cellphone = document.getElementById('cellphone').value;
+    var telephone = document.getElementById('telephone').value;
+    var email = document.getElementById('email').value;
+    var volunteerFor = document.getElementById('volunteerFor').value;
+    var dateOfBirth = document.getElementById('dateOfBirth').value;
+
+    alert("Form submitted!!");
+
+      const volunteerRef = ref(database, 'Volunteers');
+      const newVolunteerRefRef = push(volunteerRef); 
+
+  set(newVolunteerRefRef,{
+      firstName: firstName,
+      lastName: lastName,
+      cellphone: cellphone,
+      telephone: telephone,
+      email: email,
+      volunteerFor: volunteerFor,
+      dateOfBirth: dateOfBirth,
+    })
+      // ...
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+
+        alert(errorMessage);
+        // ..
+      });
+  });
+</script>
+
+</html>

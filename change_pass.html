@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GraceWell Community ACC recovery</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href=" ./css_files/forgot_password_page.css">
+  <link rel="stylesheet" href=" ./css_files/global.css">
+  <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-auth.js"></script>
+</head>
+
+<body>
+    <div class="recovery-container">
+        <div class="recovery-form">
+            <!--<div class="logo"></div>-->
+            <h1>Change Password</h1>
+            <form id="recovery-form">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                 <button id='resetbtn' name="resetbtn" type="button">Recover</button>
+            </form>       
+        </div>
+    </div>
+<script> 
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-app.js";
+    import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-database.js";
+    import { getAuth, sendPasswordResetEmail } from "firebase/auth";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyBW95P-YZ0GWJDdc_VYF8KC5VhDU5y9278",
+      authDomain: "gracewelldatabase.firebaseapp.com",
+      databaseURL: "https://gracewelldatabase-default-rtdb.europe-west1.firebasedatabase.app",
+      projectId: "gracewelldatabase",
+      storageBucket: "gracewelldatabase.appspot.com",
+      messagingSenderId: "373455644093",
+      appId: "1:373455644093:web:fdf02a68760c1d7c95ded4",
+      measurementId: "G-QE913070ZV"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const database= getDatabase(app);
+    const auth = getAuth();
+
+$("#resetbtn").click(function()
+{
+   var auth = firebase.auth();
+   var email = $("#email").val();
+
+   auth.sendPasswordResetEmail(email).then(function()
+   {
+      window.alert("Email has been sent, please check and verify");
+   })
+   .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+
+    alert(errorMessage);
+    // ..
+  
+
+     });
+});
+</script>
+
+</body>
+
+</html>
+
+<!--<script>
+  $("#resetbtn").click(function()
+{ 
+  var auth = firebase.auth();
+  var email = $("#email").val();
+
+  if(email != ""){
+    firebase.auth().sendPasswordResetEmail(email)
+  .then(() => {
+      window.alert("Email has been sent, please check and verify");
+  })
+  .catch((error) => {
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // ..
+  });
+
+  }
+  else
+  {
+    window.alert("Please enter in your email")
+  }
+})
+
+</script>-->

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GraceWell Methodist Church</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="././css_files/home_page.css">
+  <link rel="stylesheet" href="././css_files/global.css">
+</head>
+
+<body>
+  <div id="app">
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <a class="navbar-brand" href="././index.html" target="_self"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="././home_page.html" target="_self">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="././about_page.html" target="_self">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="././contact_page.html" target="_self">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="././donations_page.html" target="_self">Donations</a></li>
+          <li class="nav-item"><a class="nav-link" href="././appointments_page.html" target="_self">Appointments</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="././get_involved_page.html" target="_self">Get Involved</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="././login_page.html">Sign In</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="header-image">
+      <div class="center-panel">
+        <h1>2 Corinthians 4:16-18</h1>
+        <p>So we do not lose heart. Though our outer self is wasting away, our inner self is being renewed day by day.
+          For this light momentary affliction is preparing for us an eternal weight of glory beyond all comparison, as
+          we look not to the things that are seen but to the things that are unseen. For the things that are seen are
+          transient, but the things that are unseen are eternal.</p>
+      </div>
+    </div>
+
+    <!--Settings Menu-->
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="././edit_profile_page.html" target="_self">Account Info</a>
+      <a href="././change_pass.html" target="_self">Change password</a>
+      <a href="#" target="_self">Help & FAQs</a>
+      <a href="#" target="_self">Log Out</a>
+    </div>
+
+    <!-- Page content -->
+    <section class="content-section">
+      <span class="spn" onclick="openNav()">&#9776; Settings</span>
+      <br><br>
+      <div class="row">
+        <!-- Left side content -->
+        <div class="col-md-6">
+          <h1 class="content-header">Welcome to Our Community</h1>
+          <p class="content-paragraph">Explore our website to discover a wealth of resources, from inspiring sermons and
+            uplifting music to information about our community events and outreach programs. We believe in the power of
+            faith, love, and unity, and we hope you'll find a sense of belonging and purpose within our congregation.
+            Feel free to reach out to us with any questions, prayer requests, or ways we can assist you on your
+            spiritual journey. Together, we can grow in faith and spread the message of love and hope to the world.
+            Thank you for visiting us today. May your time here be filled with inspiration, connection, and the presence
+            of the Divine.</p>
+        </div>
+
+        <!-- Right side image -->
+        <div class="col-md-6 d-flex justify-content-end">
+          <img style="height: 300px; width: 500px;" src="././website_images/GraceWell-home-logo(edited).jpg"
+            alt="Grace Well Church" />
+        </div>
+      </div>
+
+      <!-- Recent Church Sermon Videos 
+      <div id="recent-sermons" class="row">
+        <div class="col-md-12">
+          <h2 class="content-header">Recent Sermons</h2>
+          <div class="scrolling-images">
+            <div class="scrolling-images-inner" v-for="sermon in sermons" :key="sermon.id">
+                <img :src="sermon.videoSrc":alt="sermon.title" class="sermon-image">
+                <iframe src="sermon.videoSrc" alt="sermon.title" class="sermon-image" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+              <a href="https://www.facebook.com/GraceWellMC/" style="color: black;">
+                <p class="sermon-title">{{ sermon.title }}</p>
+              </a>
+            </div>
+          </div>
+        </div> 
+      </div>-->
+
+      <!-- Recently Announced Church Events -->
+      <div id="recent-events" class="row">
+        <div class="col-md-12">
+          <h2 class="content-header">Recent Events</h2>
+          <div class="scrolling-images">
+            <div class="scrolling-images-inner" v-for="event in events" :key="event.id">
+              <a href="././events_page.html">
+                <img :src="event.imageSrc" :alt="event.title" class="event-image">
+              </a>
+              <a href="././events_page.html" style="color: black;">
+                <p class="event-title">{{ event.title }}</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+
+        <!-- Left side content -->
+        <div class="col-md-6">
+          <h2 class="content-header">Get Invloved with Us</h2>
+          <p class="content-paragraph">Ready to take an active role in our community? Explore our 'Get Involved' page to
+            discover exciting opportunities to contribute, connect, and make a positive impact through our ministry.
+            Your journey of meaningful engagement begins here.</p>
+          <a class="btn" href="././get_involved_page.html">Sign Up</a><!-- Call-to-Action Button -->
+        </div>
+
+        <!-- Right side image -->
+        <div class="col-md-6 d-flex justify-content-end">
+          <img src="././website_images/pexels-home-ministry(edited).jpg" alt="Grace Well Church" />
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+
+        <!-- Right side image -->
+        <div class="col-md-6">
+          <img src="././website_images/pexels-home-donations(edited).jpg" alt="Grace Well Church" />
+        </div>
+        <!-- Left side content -->
+        <div class="col-md-6 justify-content-end">
+          <h2 class="content-header">Give a Donation</h2>
+          <p class="content-paragraph">Generosity is a powerful act of faith and support. Visit our 'Donations' page to
+            contribute and make a lasting impact on our mission and ministry. Your gifts help us spread love and hope to
+            our community and beyond.</p>
+          <a class="btn" href="././donations_page.html">Sign Up</a><!-- Call-to-Action Button -->
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <!-- Left side content -->
+        <div class="col-md-6">
+          <h2 class="content-header">Make an Appointment</h2>
+          <p class="content-paragraph">Ready to connect one-on-one with us? Visit our 'Appointments' page to schedule a
+            personal meeting or consultation. We look forward to hearing from you and providing the support and guidance
+            you need.</p>
+          <a class="btn" href="././appointments_page.html">Sign Up</a><!-- Call-to-Action Button -->
+        </div>
+        <!-- Right side image -->
+        <div class="col-md-6 d-flex justify-content-end">
+          <img src="././website_images/pexels-home-appointments(edited).jpg" alt="Grace Well Church" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <p class="footer-label">© GraceWell Methodist Church. All rights reserved.</p>
+        <div class="footer-links">
+          <p class="footer-label">Follow Us:</p>
+          <!-- Facebook icon: https://www.flaticon.com/free-icons/facebook -->
+          <a href="https://www.facebook.com/GraceWellMC/"><img src="././website_images/facebook-logo(edited).png"
+              alt="facebook" class="footer-image"></a>
+          <!-- Instagram icon: https://www.flaticon.com/free-icons/instagram-sketched -->
+          <a href="https://www.instagram.com/gracewellmc/"><img src="././website_images/instagram-logo(edited).png"
+              alt="instagram" class="footer-image"></a>
+          <!-- LinkedIn icon: https://www.flaticon.com/free-icons/linkedin -->
+          <a href="https://za.linkedin.com/in/gracewell-methodist-church-807389219"><img
+              src="././website_images/linkedin-square-logo(edited).png" alt="linkedin" class="footer-image"></a>
+          <p class="footer-label" style="margin-left: 30px;">Download Our App:</p>
+          <!--App Store Icon: https://www.flaticon.com/free-icons/app-->
+          <a href="#"><img src="././website_images/app-store-logo(edited).png" alt="appstore" class="footer-image"></a>
+          <!--Play Store: https://www.flaticon.com/free-icons/playstore-->
+          <a href="#"><img src="././website_images/google-playstore-logo(edited).png" alt="playstore"
+              class="footer-image"></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <!-- Bootstrap JS (Popper.js and jQuery are required for Bootstrap) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- Vue.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <!-- Custom JavaScript code -->
+  <script src="././js_files/global.js"></script>
+  <script src="././js_files/home_page.js"></script>
+  <script src=""></script>
+</body>
+
+</html>
