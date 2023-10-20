@@ -1,3 +1,6 @@
+import { getAuth } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-auth.js";
+
+
 //listen for auth state 
 auth.onAuthStateChanged(user => {
     if (user){
