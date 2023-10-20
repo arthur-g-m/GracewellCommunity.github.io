@@ -1,5 +1,4 @@
 import { getAuth } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-auth.js";
-locked
 
 
 //listen for auth state 
