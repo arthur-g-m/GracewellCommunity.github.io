@@ -35,3 +35,12 @@ document.addEventListener("DOMContentLoaded", function () {
     contentSection.style.transform = "translateY(0)";
   }, 500);
 });
+
+//Settings Menu and Menu for About Us section
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
