@@ -1,0 +1,10 @@
+/* CSS code specifically for the page_template(e.i which ever page you're working on) */
+.header-image{/*Make sure the same header image isn't used in more than one page */
+    /*
+    Get free copyright images this site:https://www.pexels.com/search/free/ (Or any other site where you can download images that are free of copyright)
+    We'll be using free copyright images in the mean time, then change them with images provide by the church 
+    Make sure to to crop and resize the image appropriately so that the website does'n take long to load 
+    The images have to fit the them of the current page you're working on 
+    */
+    background-image: url("../website_images/Grace_Well_Church.jpg");
+}

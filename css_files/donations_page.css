@@ -1,0 +1,18 @@
+
+/* CSS code specifically for the donations_page */
+.header-image {
+    background-image: url("../website_images/pexels-donations\(edited\).jpg");
+}
+
+.content-paragraph-2 {
+    margin-bottom: 30px;
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+.col-md-1 img {
+    width: 1px;
+    height: 600px;
+    background-color: black;
+}
+  

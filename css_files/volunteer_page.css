@@ -1,0 +1,9 @@
+.header-image {
+    background-image: url("../website_images/pexels-rdne-stock-project-volunteering\(edited\).jpg");
+  }
+
+  .col-md-6 img {
+    width: 370px;
+    height: 170px;
+    border-radius: 10px;
+}

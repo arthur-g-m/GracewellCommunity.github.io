@@ -1,0 +1,15 @@
+.header-image {
+    background-image: url("../website_images/about-us-image-header.jpg");
+  }
+
+  .col-md-6 img {
+    width: 370px;
+    height: 200px;
+    border-radius: 10px;
+  }
+
+  .content-paragraph-2 {
+    margin-bottom: 30px;
+    margin-top: 30px;
+    font-weight: bold;
+}

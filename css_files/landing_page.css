@@ -1,0 +1,10 @@
+/* CSS code for the specifically the Landing Page */
+.header-image {
+  background-image: url("../website_images/pexel-kamil-zubrzycki-landing-(edited).jpg");
+}
+
+.col-md-6 img {
+  width: 370px;
+  height: 250px;
+  border-radius: 10px;
+}

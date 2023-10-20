@@ -1,0 +1,58 @@
+/* CSS code for the specifically the Home Page */
+.header-image {
+  background-image: url("../website_images/pexels-home-header-image\(edited\).jpg");
+}
+
+a, a:hover{
+  color: rgb(0, 0, 0);
+}
+
+.col-md-6 img {
+  width: 370px;
+  height: 200px;
+  border-radius: 10px;
+}
+
+/* Additional CSS for recent sermons */
+.scrolling-images {
+  display: flex;
+  overflow-x: scroll;
+  padding-bottom: 20px;
+}
+
+.scrolling-images-inner {
+  flex: 0 0 auto;
+  margin-right: 15px;
+  text-align: center;
+}
+
+.sermon-image {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.sermon-title {
+  margin-top: 5px;
+  font-size: 17px;
+  font-weight: bolder;
+}
+
+/* Additional CSS for recent events */
+#recent-events {
+  margin-top: 50px;
+}
+
+.event-image {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.event-title {
+  margin-top: 5px;
+  font-size: 17px;
+  font-weight: bolder;
+}

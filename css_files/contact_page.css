@@ -1,0 +1,24 @@
+.header-image {
+  background-image: url("../website_images/Grace_Well_Church.jpg");
+}
+
+.content-paragraph-2 {
+  margin-bottom: 30px;
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+#map {
+  width: 420px;
+  height: 300px;
+  border-radius: 10px;
+  border:  1px solid black;;
+}
+
+/*
+.col-md-6 img {
+  width: 370px;
+  height: 250px;
+  border-radius: 10px;
+  border:  1px solid black;;
+}*/

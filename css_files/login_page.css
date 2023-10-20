@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/Fieldbible.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+.login-container {
+    position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    margin: 60px 25px;
+}
+
+.login-form {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 60px;
+    border-radius: 60px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    align-self: center;
+    width: 450px;
+    text-align: center;
+}
+
+/*.logo {
+    width: 50px; 
+    height: 50px;
+    border-radius: 100%; 
+    margin-bottom: 10px; 
+    position: relative;
+    top: -50px; 
+}
+*/
+
+/*.logo {
+    background: url("/GracewellCommunity.github.io/website_images/gracewell_logo.png");
+    width: 160px;
+    height: 40px;
+    border-radius: 31.5px;
+    margin-bottom: 10px;
+    text-align: center;   
+    top: 50px;
+} */
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+label {
+    font-weight: bold;
+    text-align: left;
+    display: block;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    height: 40px;
+    padding: 8px;
+    border: 2px solid #0000008d;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #002699;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+h1 {
+    font-size: 30px;
+    /* Adjust the font size as required, Inter : 30 */
+    font-family: "Inter", sans-serif;
+    /* Use the Inter font family */
+    margin-bottom: 20px;
+    /* Add some space below the title */
+    text-align: center;
+}
+
+p {
+    font-size: 15px;
+    /* Adjust the font size as required, Inter : 30 */
+    font-family: "Inter", sans-serif;
+    /* Add some space below the title */
+    text-align: center;
+}
