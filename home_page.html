@@ -50,10 +50,10 @@
     <!--Settings Menu-->
     <div id="mySidenav" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <a href="#" target="_self">Account Info</a>
-      <a href="#" target="_self">Change password</a>
+      <a href="././edit_profile_page.html" target="_self">Account Info</a>
+      <a href="././change_pass.html" target="_self">Change password</a>
       <a href="#" target="_self">Help & FAQs</a>
-      <a href="#" target="_self">Log Out</a>
+      <a href="#" target="_self" id="logout">Log Out</a>
     </div>
 
     <!-- Page content -->
@@ -102,17 +102,16 @@
           <h2 class="content-header">Recent Events</h2>
           <div class="scrolling-images">
             <div class="scrolling-images-inner" v-for="event in events" :key="event.id">
-              <a :href="'././events_page.html?id=' + event.id"> <!-- Update the href to pass the event ID -->
+              <a href="././events_page.html">
                 <img :src="event.imageSrc" :alt="event.title" class="event-image">
               </a>
-              <a :href="'././events_page.html?id=' + event.id" style="color: black;">
+              <a href="././events_page.html" style="color: black;">
                 <p class="event-title">{{ event.title }}</p>
               </a>
             </div>
           </div>
         </div>
       </div>
-      <br>
       <br>
       <div class="row">
 
@@ -198,37 +197,40 @@
   <!-- Custom JavaScript code -->
   <script src="././js_files/global.js"></script>
   <script src="././js_files/home_page.js"></script>
-  <script src=""></script>
+  <script src="././auth.js"></script>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-analytics.js";
+    import { getAuth } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-auth.js";
+  
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // THIS is the connection code. for the most part the rest of the code remains the same. this just has to be pasted on the same area on all pages to do with a connection with the databse ] 
+    const firebaseConfig = {
+      apiKey: "AIzaSyBW95P-YZ0GWJDdc_VYF8KC5VhDU5y9278",
+      authDomain: "gracewelldatabase.firebaseapp.com",
+      databaseURL: "https://gracewelldatabase-default-rtdb.europe-west1.firebasedatabase.app",
+      projectId: "gracewelldatabase",
+      storageBucket: "gracewelldatabase.appspot.com",
+      messagingSenderId: "373455644093",
+      appId: "1:373455644093:web:fdf02a68760c1d7c95ded4",
+      measurementId: "G-QE913070ZV"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+  
+   // update firestore settings 
+   db.settings({timestampsInSnapshots : true });
+  
+  </script>
+
 </body>
 
-
-<script>
-
-const app = initializeApp(firebaseConfig);
-const db = getDatabase(app);
-const eventsRef = ref(db, 'GracewellEventsDB');
-
-new Vue({
-  el: '#recent-events',
-  data: {
-    events: [], // Initialize events as an empty array
-  },
-  created() {
-    onValue(eventsRef, (snapshot) => {
-      this.events = snapshotToArray(snapshot);
-    });
-  },
-});
-
-function snapshotToArray(snapshot) {
-  const result = [];
-  snapshot.forEach((childSnapshot) => {
-    const item = childSnapshot.val();
-    item.id = childSnapshot.key; // Include the event's ID
-    result.push(item);
-  });
-  return result;
-}
-
-</script>
 </html>
